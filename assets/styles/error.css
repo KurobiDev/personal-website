@@ -1,0 +1,27 @@
+body, html {
+    background-color: #000;
+    background-image: url("");
+
+    color: #fff;
+
+    font-family: "Arial", sans-serif;
+    font-size: 14pt;
+
+    height: 100%;
+
+    overflow-y: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+main {
+    position: absolute;
+
+    margin: auto;
+}
