@@ -1,0 +1,176 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template:
+    "header header"
+    "sidebar main"
+    "footer footer"
+    / 250px 1fr;
+}
+
+header {
+    grid-area: header;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 2px solid #000;
+    background-color: #d34949;
+}
+
+aside {
+    padding: 5px;
+
+    grid-area: sidebar;
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #000;
+}
+
+aside #clock {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+main {
+    grid-area: main;
+}
+
+main .game-subsection {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+main .game-subsection > img {
+    margin: 15px;
+    float: left;
+}
+
+.picture-element {
+    width: fit-content;
+}
+
+.picture-element > .desc {
+    font-size: 12pt;
+    text-align: center;
+}
+
+main > .gallery .picture-element {
+    display: inline-block;
+    text-align: center;
+}
+
+footer {
+    padding: 5px;
+
+    grid-area: footer;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+
+    border: 2px solid #000;
+
+    font-size: 0.75em;
+}
+
+footer i {
+    margin: auto 5px auto 5px ;
+}
+
+header nav menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+header nav menu li {
+    padding-right: 5px;
+    display: inline;
+    border-right: white solid 2px;
+}
+
+header nav menu li:last-child {
+    border-right: none;
+}
+
+header nav menu li > a:link, header nav menu li > a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav menu li > a:hover {
+    text-decoration: underline;
+}
+
+header nav menu li.dropdown {
+    display: inline-block;
+}
+
+header nav menu li.dropdown > strong {
+    color: #fff;
+
+    font-weight: normal;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+
+    border: 2px solid #000;
+    background-color: #f9f9f9;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 5px 10px;
+}
+
+li.dropdown:hover .dropdown-content, li.dropdown:focus-within .dropdown-content{
+    display: block;
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 12pt;
+    }
+
+    .container {
+        width: 100%;
+        grid-template:
+                "header"
+                "sidebar"
+                "main"
+                "footer";
+    }
+
+    aside {
+        display: none;
+    }
+}
+

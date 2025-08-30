@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlackFlame - {{ title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="BlackFlame's personal site.">
+    <meta name="author" content="BlackFlame">
+    <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
+
+    <link rel="stylesheet" href="{{ nesting }}assets/main.css{{ nocache }}">
+    <link rel="icon" href="{{ nesting }}assets/images/favicon.ico" type="image/x-icon">
+
+    <script src="{{ nesting }}main.js{{ nocache }}"></script>
+</head>
+<body>
+    <div class="container">
+        <noscript>Your browser either has JavaScript disabled, or does not support it at all.</noscript>
+        <header>
+                <nav>
+                    <img src="{{ nesting }}assets/images/icons/icon.png" alt="BlackFlame" width="200">
+                    <menu>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown">
+                            <strong>Projects</strong>
+                            <div class="dropdown-content">
+                                <a href="/projects/games.html">Games</a>
+                                <a href="/projects/software.html">Software</a>
+                                <a href="/projects/webdev.html">Webdev</a>
+                                <a href="/projects/art.html">Art</a>
+                                <a href="/projects/misc.html">Other</a>
+                            </div>
+                        </li>
+                        <li><a href="wiki.html">Wiki</a></li>
+                        <li><a href="archive.html">Archive</a></li>
+                    </menu>
+                </nav>
+            </header>
+            <aside>
+                <div id="time">
+                    <h4>Time in Poland:</h4>
+                    <span id="clock">12:00</span>
+                </div>
+                <div id="new-game">
+                    <h4>Games</h4>
+                    <a href="#"><img src="{{ nesting }}assets/images/buttons/Button-Steam-wishlist.gif" alt="# is now on Steam! Get it now!"></a>
+                    <br>
+                    <a href="#"><img src="{{ nesting }}assets/images/buttons/Button-Itchio-download.gif" alt="# is now on Itch.io! Get it now!"></a>
+                </div>
+                <div id="link-button">
+                    <h4>Link back</h4>
+                    <a href="https://kurobi.neocities.org/" target="_blank"><img src="{{ nesting }}assets/images/88x31.gif" alt="BlackFlame"></a>
+                    <textarea class="code-textarea"><a href="https://kurobi.neocities.org/" target="_blank"><img src="{{ nesting }}assets/images/88x31.gif" alt="BlackFlame"></a>
+                    </textarea>
+                    <br>
+                    <small>Avoid hotlinking for now</small>
+                </div>
+                <div id="badges">
+                    <h4>Buttons</h4>
+                    <marquee class="aside_button-gallery" scrollamount="5">
+                        <div>
+                            <img src="{{ nesting }}assets/images/buttons/hl.gif" alt="Half-Life">
+                            <img src="{{ nesting }}assets/images/buttons/2hu.gif" alt="Touhou Project">
+                            <img src="{{ nesting }}assets/images/buttons/bestviewedcomp.gif" alt="Best viewed with a PC">
+                            <img src="{{ nesting }}assets/images/buttons/firefoxget.gif" alt="Get Firefox!">
+                            <img src="{{ nesting }}assets/images/buttons/fspeech.gif" alt="Free Speech NOW!">
+                        </div>
+                    </marquee>
+                </div>
+            </aside>
+        <main>
+            {{ content | safe }}
+        </main>
+        <footer>
+                    &copy; BlackFlame (Kurobi) 2025
+                    <i>|</i>
+                    <a href="https://neocities.org/site/kurobi" target="_blank">neocities profile</a>
+                    <i>|</i>
+                    <a href="/sitemap.html">sitemap</a>
+                    <i>|</i>
+                    <a href="https://kurobi.nekoweb.org/">Nekoweb mirror</a>
+                    <i>|</i>
+                    <a href="/v99">Go back to the 90s.</a>
+        </footer>
+    </div>
+
+    <!-- Scripts here -->
+    <script src="{{ nesting }}assets/js/clock.js"></script>
+</body>
+</html>
