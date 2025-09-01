@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kurobi's Gacha Incremental</title>
+    <script src="./assets/game.js"></script>
+</head>
+<body>
+    <h1>Gacha Incremental</h1>
+    <div id="pulls_screen">
+        <span id="info">Click one of the buttons to pull.</span><br>
+        <span id="single"></span>
+        <table id="ten">
+            <tr>
+
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+    </div>
+    <button id="single-pull" onclick="pull_single()">Pull 1</button>
+    <button id="pull-ten" onclick="pull_ten()"> Pull 10</button>
+    <h2>Statistics</h2>
+    Total pulls: <span id="pulls_cnt">0</span>
+    <br>
+    Commons pulled: <span id="common_cnt">0</span>
+    <br>
+    Uncommons pulled: <span id="uncommon_cnt">0</span>
+    <br>
+    Rares pulled: <span id="rare_cnt">0</span>
+    <br>
+</body>
+</html>
