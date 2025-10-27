@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     background-color: #000;
-    background-image: url("");
+    background-image: url("/assets/images/background.gif");
 
     color: #fff;
 
@@ -13,6 +17,8 @@ body, html {
 }
 
 .container {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;

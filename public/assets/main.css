@@ -1,5 +1,14 @@
 :root {
+    --site-font-size: 14pt;
+    --site-font-family: Arial, Helvetica, sans-serif;
 
+    /* Light Mode */
+    --site-background-image: url("/assets/images/background.gif");
+
+    --navbar-background-color: #d34949;
+    --sidebar-background-color: #fff;
+    --main-background-color: #fff;
+    --footer-background-color: #fff;
 }
 
 * {
@@ -7,9 +16,9 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14pt;
-    background-image: url("/assets/images/background.gif");
+    font-family: var(--site-font-family);
+    font-size: var(--site-font-size);
+    background-image: var(--site-background-image);
 }
 
 .container {
@@ -44,7 +53,7 @@ aside {
     justify-content: center;
     text-align: center;
     border: 2px solid #000;
-    background-color: #fff;
+    background-color: var(--sidebar-background-color);
 }
 
 aside #clock {
@@ -58,7 +67,7 @@ main {
     padding: 10px;
 
     border: 2px solid #000;
-    background-color: #fff;
+    background-color: var(--main-background-color);
 }
 
 footer {
@@ -71,7 +80,7 @@ footer {
     justify-content: center;
 
     border: 2px solid #000;
-    background-color: #fff;
+    background-color: var(--footer-background-color);
 
     font-size: 0.75em;
 }
@@ -91,7 +100,7 @@ header nav menu {
     padding: 10px;
 
     border: 2px solid #000;
-    background-color: #d34949;
+    background-color: var(--navbar-background-color);
 }
 
 header nav menu li {
@@ -155,7 +164,7 @@ li.dropdown:hover .dropdown-content, li.dropdown:focus-within .dropdown-content{
 }
 
 .picture-element {
-    width: 400px;
+    width: 300px;
     text-align: center;
 }
 
@@ -175,16 +184,12 @@ li.dropdown:hover .dropdown-content, li.dropdown:focus-within .dropdown-content{
     display: inline;
 }
 
-.button-gallery div img {
-    transition: transform .2s ease;
-}
-
 .button-gallery div:hover{
     z-index: 1;
 }
 
 .button-gallery div img:hover{
-    transform: scale(1.3);
+    transform: scale(1.25);
 }
 
 @media (max-width: 800px) {
@@ -212,6 +217,16 @@ li.dropdown:hover .dropdown-content, li.dropdown:focus-within .dropdown-content{
 
     aside {
         display: none;
+    }
+
+    header nav img {
+        width: 300px;
+    }
+
+    .project-subsection > img {
+        margin: auto;
+        float: none;
+        display: block;
     }
 }
 

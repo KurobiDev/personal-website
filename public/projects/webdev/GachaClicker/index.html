@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Kurobi's Gacha Incremental</title>
-    <script src="./assets/game.js"></script>
+    <link rel="icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <a href="../">Go back to Web Projects page.</a>
     <h1>Gacha Incremental</h1>
     <div id="pulls_screen">
         <span id="info">Click one of the buttons to pull.</span><br>
@@ -30,5 +31,37 @@
     <br>
     Rares pulled: <span id="rare_cnt">0</span>
     <br>
+    <br>
+    <button id="save-button" onclick="save_game()">Save Game</button>
+    <button id="erase-button" onclick="localStorage.clear(); console.log('Cleared all the data.')">Erase Data</button>
+    <footer>
+        <p>
+            &copy; Kurobi 2025
+        </p>
+    </footer>
+    <div id="changelog">
+        <h1>Changelog</h1>
+        <div>
+            <time datetime="21-10-2025">21-10-2025</time>
+            <ul>
+                <li>Began the implementation of save system, allowing you to keep your Kurobis between sessions.</li>
+                <li>Rewritten the game data management - now all data is stored as an Object</li>
+            </ul>
+        </div>
+        <div>
+            <time datetime="10-09-2025">10-09-2025</time>
+            <ul>
+                <li>Adjusted card rarities, making the infamous 9 blue and 1 yellow pulls more frequent.</li>
+            </ul>
+        </div>
+        <div>
+            <time datetime="10-09-2025">02-09-2025</time>
+            <ul>
+                <li>Released the minigame as a subsite.</li>
+            </ul>
+        </div>
+    </div>
 </body>
+<!--SCRIPTS-->
+<script src="./assets/game.js"></script>
 </html>

@@ -1,0 +1,154 @@
+:root {
+    --site-font-size: 14pt;
+    --site-font-family: Arial, Helvetica, sans-serif;
+
+    /* Light Mode */
+    --site-background-image: url("/assets/images/background.gif");
+
+    --navbar-background-color: #d34949;
+    --sidebar-background-color: #fff;
+    --main-background-color: #fff;
+    --footer-background-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--site-font-family);
+    font-size: var(--site-font-size);
+    background-image: var(--site-background-image);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+header {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main {
+    margin-top: 15px;
+    border: 2px solid #000;
+    background-color: var(--main-background-color);
+
+    padding: 10px;
+}
+
+footer {
+    font-size: 0.7em;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 15px;
+
+    border: 2px solid #000;
+    background-color: var(--footer-background-color);
+
+    padding: 10px;
+}
+
+header nav {
+    width: 100%;
+}
+
+header nav menu {
+    list-style-type: none;
+
+    margin: 0;
+    padding: 10px;
+
+    border: 2px solid #000;
+    background-color: var(--navbar-background-color);
+}
+
+header nav menu li {
+    display: inline;
+    
+    padding-right: 5px;
+    border-right: 2px solid #fff;
+}
+
+header nav menu li:last-child {
+    border-right: none;
+}
+
+header nav menu a:link, header nav menu a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+header nav menu a:hover, header nav menu a:focus-within {
+    text-decoration: underline;
+}
+
+article  > h1 {
+    text-align: center;
+}
+
+article {
+    padding: 5px;
+    font-size: 12pt;
+}
+
+.blog-articles {
+    margin: 5px;
+}
+
+.blog-entry {
+    padding: 5px;
+    border-bottom: 2px dashed #999;
+}
+
+.blog-entry:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.picture-element {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+.picture-element > .desc {
+    font-size: 12pt;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 12pt;
+    }
+
+    .container {
+        width: 100%;
+        grid-template:
+                "header"
+                "sidebar"
+                "main"
+                "footer";
+    }
+
+    main {
+        text-align: center;
+    }
+
+    .gallery .picture-element {
+        margin: auto;
+        display: block;
+    }
+
+    header nav img {
+        width: 300px;
+    }
+
+}

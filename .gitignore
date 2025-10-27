@@ -11,6 +11,9 @@
 *.tar
 *.zip
 
+# Ignore text files
+*.txt
+
 # Ignore node dependency directories
 node_modules/
 
