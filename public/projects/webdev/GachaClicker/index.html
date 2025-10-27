@@ -3,64 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Kurobi's Gacha Incremental</title>
-    <link rel="icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <a href="../">Go back to Web Projects page.</a>
-    <h1>Gacha Incremental</h1>
-    <div id="pulls_screen">
-        <span id="info">Click one of the buttons to pull.</span><br>
-        <span id="single"></span>
-        <table id="ten">
-            <tr>
+<h1>Gacha Incremental</h1>
+<div id="main">
+    <span id="info">Click one of the buttons to pull.</span><br>
+    <div id="pulls">
 
-            </tr>
-            <tr>
-
-            </tr>
-        </table>
     </div>
-    <button id="single-pull" onclick="pull_single()">Pull 1</button>
-    <button id="pull-ten" onclick="pull_ten()"> Pull 10</button>
-    <h2>Statistics</h2>
-    Total pulls: <span id="pulls_cnt">0</span>
-    <br>
-    Commons pulled: <span id="common_cnt">0</span>
-    <br>
-    Uncommons pulled: <span id="uncommon_cnt">0</span>
-    <br>
-    Rares pulled: <span id="rare_cnt">0</span>
-    <br>
-    <br>
-    <button id="save-button" onclick="save_game()">Save Game</button>
-    <button id="erase-button" onclick="localStorage.clear(); console.log('Cleared all the data.')">Erase Data</button>
-    <footer>
-        <p>
-            &copy; Kurobi 2025
-        </p>
-    </footer>
-    <div id="changelog">
-        <h1>Changelog</h1>
-        <div>
-            <time datetime="21-10-2025">21-10-2025</time>
-            <ul>
-                <li>Began the implementation of save system, allowing you to keep your Kurobis between sessions.</li>
-                <li>Rewritten the game data management - now all data is stored as an Object</li>
-            </ul>
-        </div>
-        <div>
-            <time datetime="10-09-2025">10-09-2025</time>
-            <ul>
-                <li>Adjusted card rarities, making the infamous 9 blue and 1 yellow pulls more frequent.</li>
-            </ul>
-        </div>
-        <div>
-            <time datetime="10-09-2025">02-09-2025</time>
-            <ul>
-                <li>Released the minigame as a subsite.</li>
-            </ul>
-        </div>
+</div>
+<button id="single-pull" onclick="
+    // Clear the pull container
+    document.getElementById('pulls').innerHTML = '';
+    pull();
+">Pull 1</button>
+<button id="pull-ten" onclick="pull_ten()"> Pull 10</button>
+<h2>Statistics</h2>
+Total pulls: <span id="pulls_cnt">0</span>
+<br>
+Commons pulled: <span id="common_cnt">0</span>
+<br>
+Uncommons pulled: <span id="uncommon_cnt">0</span>
+<br>
+Rares pulled: <span id="rare_cnt">0</span>
+<br>
+<br>
+<button id="save-button" onclick="save_game()">Save Game</button>
+<button id="erase-button" onclick="clear_data()">Erase Data</button>
+<footer>
+    <p>
+        &copy; Kurobi 2025
+    </p>
+</footer>
+<div id="changelog">
+    <h1>Changelog</h1>
+    <div>
+        <time datetime="21-10-2025">21-10-2025</time>
+        <ul>
+            <li>Rewritten the pulling system - added a separate guaranteeing function, eliminating the bug, where the game would count common pulls while trying to find an uncommon or rarer card.</li>
+        </ul>
     </div>
+    <div>
+        <time datetime="21-10-2025">21-10-2025</time>
+        <ul>
+            <li>Began the implementation of save system, allowing you to keep your Kurobis between sessions.</li>
+            <li>Rewritten the game data management - now all data is stored as an Object</li>
+        </ul>
+    </div>
+    <div>
+        <time datetime="10-09-2025">10-09-2025</time>
+        <ul>
+            <li>Adjusted card rarities, making the infamous 9 blue and 1 yellow pulls more frequent.</li>
+        </ul>
+    </div>
+    <div>
+        <time datetime="10-09-2025">02-09-2025</time>
+        <ul>
+            <li>Released the minigame as a subsite.</li>
+        </ul>
+    </div>
+</div>
 </body>
 <!--SCRIPTS-->
 <script src="./assets/game.js"></script>

@@ -136,6 +136,8 @@ function clear_data() {
     game.total_uncommons= 0;
     game.total_rares= 0;
 
+    window.location.reload();
+
     console.log("Cleared all data.");
 }
 
