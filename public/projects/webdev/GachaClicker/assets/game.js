@@ -1,8 +1,19 @@
 // Card Rarities
-const rarities = {
-    "common": 97,
-    "uncommon": 2.4,
-    "rare": 0.6,
+const Rarities = {
+    COMMON: {
+        CHANCE: 87,
+        PIC: './assets/cards/common.png'
+    },
+
+    UNCOMMON: {
+        CHANCE: 10,
+        PIC: './assets/cards/uncommon.png'
+    },
+
+    RARE: {
+        CHANCE: 3,
+        PIC: './assets/cards/rare.png'
+    }
 }
 
 // Game State
@@ -20,87 +31,67 @@ function init() {
     }
 }
 
-function pull_single() {
-    pulls += 1;
+function pull() {
+    //Pull a single card, with varying rarity.
 
-    // Clear the pull table
-    let tab = document.getElementById("ten");
-    let rows = tab.getElementsByTagName("tr");
+    game.total_pulls += 1;
 
-    rows[0].innerHTML = "";
-    rows[1].innerHTML = "";
-
-    // Clear the single pull element.
-    let card = document.getElementById("single");
-    card.innerHTML = "";
+    let container = document.getElementById('pulls');
 
     let img = document.createElement("img");
     img.src = check_rarity();
-    card.appendChild(img);
+    container.appendChild(img);
 
     console.log("Pulled a single card. Total number of pulls is: " + game.total_pulls);
-    document.getElementById("info").innerHTML = "Pulled a single card.";
     update()
 }
 
 function pull_ten() {
-    game.total_pulls += 10;
+    // Pulls ten cards, each tenth card is guaranteed to be uncommon or rarer.
 
-    // Clear the single pull element.
-    document.getElementById("single").innerHTML = "";
+    // Clear the pull container
+    document.getElementById('pulls').innerHTML = '';
 
-    let tab = document.getElementById("ten");
-    let rows = tab.getElementsByTagName("tr");
-
-    // Clear both rows, so the table won't have extra cells
-    rows[0].innerHTML = "";
-    rows[1].innerHTML = "";
-
-    for (let i = 0; i < 10; i++) {
-        let cell = document.createElement("td");
-
-        let img = document.createElement("img");
-
-        // Guarantee an uncommon or rare card on tenth pull.
-        if (i === 9) {
-            let g_src = "";
-            do {
-                g_src = check_rarity();
-            } while (g_src !== "./assets/cards/uncommon.png" && g_src !== "./assets/cards/rare.png");
-
-            img.src = g_src;
-        } else {
-            img.src = check_rarity();
-        }
-        cell.appendChild(img);
-
-        // Inserting card images into a table
-        if (i < 5) {
-            rows[0].appendChild(cell); // First row
-        } else {
-            rows[1].appendChild(cell); // Second row
-        }
+    for (let i = 0; i < 9; i++) {
+        pull();
     }
-    console.log("Pulled ten cards. Total number of pulls is: " + game.total_pulls);
-    document.getElementById("info").innerHTML = "Pulled ten cards.";
+
+    game.total_pulls += 1;
+
+    let container = document.getElementById('pulls');
+
+    let img = document.createElement("img");
+    img.src = guarantee();
+    container.appendChild(img);
+
+    console.log("Pulled a single card. Total number of pulls is: " + game.total_pulls);
     update()
 }
 
 function check_rarity() {
-    let rand = Math.floor(Math.random() * 101);
+    let roll = Math.floor(Math.random() * 100) + 1;
 
-    if (rand <= rarities.rare) {
+    if (roll <= Rarities.RARE.CHANCE) {
         game.total_rares += 1;
-        console.log("Rare: " + rand);
-        return "./assets/cards/rare.png";
-    } else if (rand <= rarities.uncommon) {
+        return Rarities.RARE.PIC;
+    } else if (roll <= Rarities.UNCOMMON.CHANCE) {
         game.total_uncommons += 1;
-        console.log("Uncommon: " + rand);
-        return "./assets/cards/uncommon.png";
+        return Rarities.UNCOMMON.PIC;
     } else {
         game.total_commons += 1;
-        console.log("Common: " + rand);
-        return "./assets/cards/common.png";
+        return Rarities.COMMON.PIC;
+    }
+
+}
+
+function guarantee() {
+    let roll = Math.floor(Math.random() * 100) + 1;
+    if (roll <= Rarities.RARE.CHANCE) {
+        game.total_rares += 1;
+        return Rarities.RARE.PIC
+    } else {
+        game.total_uncommons += 1;
+        return Rarities.UNCOMMON.PIC;
     }
 }
 
@@ -130,7 +121,7 @@ function load_game() {
 
 function clear_data() {
     localStorage.clear();
-    
+
     game.total_pulls= 0;
     game.total_commons= 0;
     game.total_uncommons= 0;
