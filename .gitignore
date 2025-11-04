@@ -17,5 +17,8 @@
 # Ignore node dependency directories
 node_modules/
 
+# Web Projects - These will have separate repositories
+public/projects/webdev/GachaClicker
+
 # Track these files, if they exist
 !.gitignore
