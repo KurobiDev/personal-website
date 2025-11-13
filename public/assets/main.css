@@ -215,12 +215,22 @@ body {
 }
 
 .nav-menu__nav:link {
+    /* Text */
     text-decoration: none;
 }
 
 .nav-menu__nav:hover {
+    /* Text */
     text-decoration: underline;
 }
+
+.nav-menu__nav--active {
+    /* Text */
+    font-weight: bold;
+    
+    color: black;
+}
+
 
 #time {
     /* Text */
