@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kurobi - Home</title>
+    <title>Kurobi</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,120 +10,80 @@
     <meta name="author" content="BlackFlame">
     <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
 
-    <link rel="stylesheet" href="./assets/main.css?nocache=1761827820984">
+    <link rel="stylesheet" href="./assets/main.css?nocache=1763048933142">
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
-
-    <!--<script src="./main.js?nocache=1761827820984"></script>-->
 </head>
 <body>
+    <noscript>
+        <dialog id="no-js" open>
+            <p>
+                Please enable JavaScript on your browser, or switch to one with JS support.
+            </p>
+        </dialog>
+    </noscript>
     <div class="container">
-        <noscript>Your browser either has JavaScript disabled, or does not support it at all.</noscript>
-        <header>
-                <nav>
-                    <img src="./assets/images/title.png" alt="Kurobi" width="500">
-                    <menu>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/about.html">About</a></li>
-                        <li class="dropdown">
-                            <strong>Projects</strong>
-                            <div class="dropdown-content">
-                                <a href="/projects/games.html">Games</a>
-                                <a href="/projects/webdev.html">Webdev</a>
-                                <a href="/projects/art.html">Art</a>
-                                <a href="/projects/misc.html">Other</a>
-                            </div>
-                        </li>
-                        <li><a href="/blog">Blog</a></li>
-                        <!--<li><a href="/archive.html">Archive</a></li>-->
-                    </menu>
-                </nav>
-            </header>
-            <aside>
-                <div id="time">
-                    <h4>Time in Poland:</h4>
-                    <span id="clock">12:00</span>
-                </div>
-                <!--
-                <div id="new-game">
-                    <h4>Games</h4>
-                    <a href="#"><img src="./assets/images/buttons/Button-Steam-wishlist.gif" alt="# is now on Steam! Get it now!"></a>
-                    <br>
-                    <a href="#"><img src="./assets/images/buttons/Button-Itchio-download.gif" alt="# is now on Itch.io! Get it now!"></a>
-                </div>
-                -->
-                <div id="link-button">
-                    <h4>Link button</h4>
-                    <a href="https://kurobi.neocities.org/" target="_blank"><img src="https://kurobi.neocities.org/assets/images/88x31.gif" alt="BlackFlame"></a>
-                    <br>
-                    <textarea class="code-textarea"><a href="https://kurobi.neocities.org/" target="_blank"><img src="https://kurobi.neocities.org/assets/images/88x31.gif" alt="BlackFlame"></a>
-                    </textarea>
-                </div>
-                <div id="social">
-                    <h4>Reach me here</h4>
-                    <div class="aside_button-gallery">
-                        <a href="https://discord.gg/X5zuCb9tZz"><img src="./assets/images/buttons/social/discord_now.gif" alt="Discord Server"></a>
+        <div id="header">
+            <div id="header-banner"></div>
+            <div class="marquee-hor">
+                <marquee behavior="" direction="">
+                    <div class="button">
+                        <img src="" alt="Button">
                     </div>
-                </div>
-                <div id="badges">
-                    <h4>Buttons</h4>
-                    <div class="aside_button-gallery">
-                        <marquee class="button-row" id="likes-buttons" scrollamount="5">
-                            <div>
-                                <img src="./assets/images/buttons/likes/hl.gif" alt="Half-Life">
-                                <img src="./assets/images/buttons/likes/2hu.gif" alt="Touhou Project">
-                                <img src="./assets/images/buttons/likes/fspeech.gif" alt="Free Speech NOW!">
-                            </div>
-                        </marquee>
-                    </div>
-                </div>
-            </aside>
-        <main>
+                </marquee>
+            </div>
+        </div>
+        <div id="main">
             
-<section>
-    <h1>
-        Welcome to my site!
-    </h1>
-    <p>
-        This is my website. It's mainly inspired by various neocities sites.
-    </p>
-    <p>
-        I'm a beginner programmer and an avid gamer, with particular interest in old FPS games like DOOM, Quake, Half-Life Series and Unreal.
-    </p>
-    <div class="button-gallery">
-        <div><img src="./assets/images/buttons/technical/neocities.gif" alt="neocities.org - the web is yours!"></div>
-        <div><img src="./assets/images/buttons/technical/bestviewedcomp.gif" alt="Best viewed with a computer!"></div>
-        <div><img src="./assets/images/buttons/technical/firefox4.gif" alt="Tested on FireFox"></div>
-        <div><img src="./assets/images/buttons/technical/windows.gif" alt="Made on Windows"></div>
-        <div>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                        src="https://jigsaw.w3.org/css-validator/images/vcss"
-                        alt="Valid CSS!" />
-            </a>
+<div id="welcome">
+    Welcome to my website! Here I just show my projects and ramble about stuff. Enjoy your stay here!
+</div>
+<div class="section">
+    <div class="section__title">
+        <h1>Introduction</h1>
+    </div>
+    <div class="section__content">
+        <p>I have made this website mainly to have means of showcasing my work and express myself without relying solely on social media. Here I'll also ramble about numerous things including my interests, works and anything that catches my attention.</p>
+    </div>
+</div>
+        </div>
+        <div class="sidebar sidebar--left">
+            <div id="navigation">
+                <div class="nav-menu">
+                    <nav>
+                        <div class="nav-menu__cat-title">Menu</div>
+                        <a class="nav-menu__nav nav-menu__nav--active" href="/">Home</a>
+                        <a class="nav-menu__nav nav-menu__nav--inactive" href="/about">About</a>  
+                        <a class="nav-menu__nav nav-menu__nav--inactive" href="/blog">Blog</a>
+                    </nav>
+                    <nav>
+                        <div class="nav-menu__cat-title">Projects</div>
+                        <a class="nav-menu__nav nav-menu__nav--inactive" href="/projects/games">Gamedev</a>
+                        <a class="nav-menu__nav nav-menu__nav--inactive" href="/projects/webdev">Webdev</a>
+                        <a class="nav-menu__nav nav-menu__nav--inactive" href="/projects/art">Art</a>
+                        <a class="nav-menu__nav nav-menu__nav--inactive" href="/projects/misc">Misc</a>
+                    </nav>
+                </div>
+            </div>
+            <div id="time">
+                <h4>Time in Poland:</h4>
+                <span id="clock">0:00</span>
+            </div>
+            <div id="social">
+                <h4>Where to find me</h4>
+                <div class="sidebar__button-gallery">
+                    <div class="button">
+                        <a href="https://discord.gg/X5zuCb9tZz" title="Discord Server"><img src="./assets/images/buttons/social/discord_now.gif" alt="Discord"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar sidebar--right">
+            Lorem ipsum dolor sit amet.
+        </div>
+        <div id="footer">
+            &copy; Kurobi 2025 <br>
+            Hosted on <a href="https://neocities.org">Neocities</a>
         </div>
     </div>
-    <br>
-    <div class="picture-element" style="margin: auto">
-        <img src="./assets/images/misc/momoid.jpg" alt="Momoid" width="200">
-        <br>
-        <p class="desc">Have here a Momoid.<br>Truly a fascinating creature.</p>
-    </div>
-</section>
-        </main>
-        <footer>
-                    &copy; Kurobi (BlackFlame) 2025
-                    <i>|</i>
-                    <a href="https://neocities.org/site/kurobi" target="_blank">neocities profile</a>
-                    <i>|</i>
-                    <a href="/sitemap.html">sitemap</a>
-                    <i>|</i>
-                    <a href="https://kurobi.nekoweb.org/">Nekoweb mirror</a>
-                    <i>|</i>
-                    <a href="/v99">Go back to the 90s.</a>
-        </footer>
-    </div>
-
-    <!-- Scripts here -->
-    <script src="./assets/js/clock.js"></script>
 </body>
 </html>
