@@ -4,13 +4,15 @@
     --site-font-size: 14pt;
     --site-font-family: Arial, Helvetica, sans-serif;
 
-    /* Light Mode */
-    --site-background-image: url("/assets/images/Wallpaper.png");
+    /* Theme - BORDERS*/
+    --theme-border-style: 3px solid #FF0000;
+    --theme-border-radius: 10px;
 
-    --navbar-background-color: #d34949;
-    --sidebar-background-color: #fff;
-    --main-background-color: #fff;
-    --footer-background-color: #fff;
+    /* Light Mode */
+    --light-site-background-image: url("/assets/images/Wallpaper.png");
+    --light-background-color: #d34949;
+
+    --light-element-background-color: linear-gradient(to bottom,red, black);
 }
 
 * {
@@ -25,12 +27,14 @@ body {
     margin-right: 0;
 
     /* Background */
-    background-image: var(--site-background-image);
+    background-color: var(--light-background-color);
+    background-image: var(--light-site-background-image);
     background-size: cover;
 
     /* Text */
     font-family: var(--site-font-family);
     font-size: var(--site-font-size);
+    color: white;
 
     /* Misc */
     overflow-x: hidden;
@@ -97,13 +101,12 @@ body {
     padding-right: 0;
 
     /* Border */
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 0px;
+    border: var(--theme-border-style);
+    border-radius: var(--theme-border-radius);
 
     /* Background */
     background-color: white;
+    background-image: var(--light-element-background-color);
 }
 
 .header__button-banner marquee {
@@ -128,13 +131,12 @@ body {
     grid-area: main;
 
     /* Border */
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 0px;
+    border: var(--theme-border-style);
+    border-radius: var(--theme-border-radius);
 
     /* Background */
     background-color: white;
+    background-image: var(--light-element-background-color);
 }
 
 #main > .section > .section__title {
@@ -155,13 +157,12 @@ body {
     padding-right: 10px;
 
     /* Border */
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 0px;
+    border: var(--theme-border-style);
+    border-radius: var(--theme-border-radius);
 
     /* Background */
     background-color: white;
+    background-image: var(--light-element-background-color);
 }
 
 .sidebar--left {
@@ -239,10 +240,8 @@ body {
     display: block;
     
     /* Border */
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 0px;
+    border: var(--theme-border-style);
+    border-radius: var(--theme-border-radius);
 
     /* Text */
     text-align: center;
@@ -253,13 +252,18 @@ body {
     /* Background */
     background-color: black;
 
+    /* Border */
+    border: 1px solid black;
+    border-radius: 10px 10px 0px 0px;
+
     /* Text */
     color: white;
 }
 
-.nav-menu__nav:link {
+.nav-menu__nav {
     /* Text */
     text-decoration: none;
+    color: white;
 }
 
 .nav-menu__nav:hover {
