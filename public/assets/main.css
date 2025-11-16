@@ -417,7 +417,7 @@ body {
     transform: scale(1.25);
 }
 
-.header__button-banner .button {
+.button {
     /* Margins */
     margin-top: 0;
     margin-bottom: 0;
