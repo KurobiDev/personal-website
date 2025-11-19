@@ -1,0 +1,11 @@
+<rss xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Kurobi's webpage</title>
+        <link>https://kurobi.neocities.org/</link>
+        <atom:link href="https://kurobi.neocities.org/feed.xml" rel="self" type="applications/rss+xml"/>
+        <desription>My personal site for sharing my projects, ramblings on blog and more.</desription>
+        <item>
+            
+        </item>
+    </channel>
+</rss>

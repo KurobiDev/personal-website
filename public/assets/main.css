@@ -30,6 +30,8 @@ body {
     background-color: var(--light-background-color);
     background-image: var(--light-site-background-image);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     /* Text */
     font-family: var(--site-font-family);
