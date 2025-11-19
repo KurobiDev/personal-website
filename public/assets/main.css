@@ -5,14 +5,14 @@
     --site-font-family: Arial, Helvetica, sans-serif;
 
     /* Theme - BORDERS*/
-    --theme-border-style: 3px solid #FF0000;
+    --theme-border-style: 3px solid #3f0000;
     --theme-border-radius: 10px;
 
     /* Light Mode */
     --light-site-background-image: url("/assets/images/Wallpaper.png");
     --light-background-color: #d34949;
 
-    --light-element-background-color: linear-gradient(to bottom,red, black);
+    --light-element-background-color: linear-gradient(190deg,red, black);
 }
 
 * {
@@ -195,6 +195,8 @@ body {
     /* Text */
     font-size: small;
     text-align: center;
+    
+    text-shadow: 2px 2px 2px black;
 }
 
 .nav-menu {
@@ -238,10 +240,6 @@ body {
     /* Layout */
     width: 100%;
     display: block;
-    
-    /* Border */
-    border: var(--theme-border-style);
-    border-radius: var(--theme-border-radius);
 
     /* Text */
     text-align: center;
@@ -261,9 +259,26 @@ body {
 }
 
 .nav-menu__nav {
+
+    /* Margins */
+    margin: 0 auto;
+
+    /* Background */
+    background-color: #d34949;
+
+    /* Border */
+    border: 1px solid black;
+    border-top: none;
+    border-radius: 0;
+
     /* Text */
     text-decoration: none;
     color: white;
+}
+
+.nav-menu__nav:last-child {
+    /* Border */
+    border-radius: 0 0 10px 10px;
 }
 
 .nav-menu__nav:hover {
@@ -272,6 +287,9 @@ body {
 }
 
 .nav-menu__nav--active {
+    /* Background */
+    background-color: antiquewhite;
+    
     /* Text */
     font-weight: bold;
     
