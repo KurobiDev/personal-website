@@ -5,7 +5,7 @@
     --site-font-family: Arial, Helvetica, sans-serif;
 
     /* Theme - BORDERS*/
-    --theme-border-style: 3px solid #3f0000;
+    --theme-border-style: 3px solid black;
     --theme-border-radius: 10px;
     --theme-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
 
@@ -115,7 +115,7 @@ body {
     box-shadow: var(--theme-box-shadow);
 }
 
-.header__info-banner {
+.header__announcement {
     /* Margins */
     margin-top: 15px;
     margin-bottom: 0;
@@ -130,17 +130,32 @@ body {
 
     /* Border */
     border: var(--theme-border-style);
-    border-radius: var(--theme-border-radius);
+    border-radius: 5px;
 
     /* Background */
-    background-color: white;
-    background-image: linear-gradient( 198deg, orangered, darkorange);
+    background-color: darkorange;
+    background-image: linear-gradient( 90deg, darkslateblue, darkorchid);
 
     /* Misc */
     box-shadow: var(--theme-box-shadow);
 
+}
+
+.header__announcement p {
+    /* Margins */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+
     /* Text */
     font-weight: bold;
+}
+
+.header__announcement--alert {
+     /* Background */
+    background-color: red;
+    background-image: linear-gradient( 90deg, red, orangered);
 }
 
 .header__button-banner marquee {
@@ -179,6 +194,8 @@ body {
 .section__title {
     /* Text */
     text-align: center;
+
+    text-shadow: 1px 1px 5px black;
 }
 
 .section p {
@@ -313,7 +330,7 @@ body {
     margin: 0 auto;
 
     /* Background */
-    background-color: #d34949;
+    background-color: firebrick;
 
     /* Border */
     border: 2px solid black;
@@ -337,7 +354,7 @@ body {
 
 .nav-menu__nav--active {
     /* Background */
-    background-color: antiquewhite;
+    background-color: salmon;
     
     /* Text */
     font-weight: bold;
@@ -345,6 +362,10 @@ body {
     color: black;
 }
 
+#welcome p {
+    /* Text */
+    text-align: center;
+}
 
 #time {
     /* Text */
@@ -356,6 +377,11 @@ body {
     /* Font */
     font-weight: bold;
     font-size: 2em;
+}
+
+#social {
+    /* Text */
+    text-align: center;
 }
 
 .button-gallery {
@@ -376,7 +402,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    /* Text */
 }
 
 .gallery {
@@ -414,8 +439,6 @@ body {
     border-style: solid;
     border-color: black;
     border-radius: 5px;
-
-    /* Text */
 
     /* Misc */
     box-shadow: 0 0 5px 3px rgba(255, 255, 255, 1);;
@@ -495,3 +518,21 @@ body {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.project-subsection__title{
+    /* Text */
+    text-align: center;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+.project-subsection p {
+    /* Text */
+    text-align: center;
+}
+
+.project-subsection__title a{
+    /* Text */
+    color: white;
+}
+
