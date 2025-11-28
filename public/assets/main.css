@@ -191,6 +191,41 @@ body {
     box-shadow: var(--theme-box-shadow);
 }
 
+#main hr {
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    /* Background */
+    background-color: white;
+
+    /* Border */
+    border: 2px solid white;
+    border-radius: 2px;
+
+    /* Misc */
+    box-shadow: 0 0 10px 2px white;
+}
+
+#main a:link {
+    /* Text */
+    color: darkgray;
+    text-decoration: underline;
+}
+
+#main a:hover {
+    /* Text */
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 2px 2px 5px black;
+}
+
+#main a:visited {
+    /* Text */
+    color: gray;
+}
+
 .section__title {
     /* Text */
     text-align: center;
@@ -263,6 +298,16 @@ body {
     text-align: center;
     
     text-shadow: 2px 2px 2px black;
+}
+
+#footer a {
+    /* Text */
+    color: white;
+}
+
+#footer a:hover {
+    /* Text */
+    color: darkgray;
 }
 
 .nav-menu {
@@ -425,7 +470,7 @@ body {
     padding-right: 0;
 
     /* Layout */
-    width: calc(25% - 10px);
+    width: 250px;
     height: 250px;
 
     box-sizing: border-box;
@@ -522,8 +567,6 @@ body {
 .project-subsection__title{
     /* Text */
     text-align: center;
-
-    text-shadow: 2px 2px 5px black;
 }
 
 .project-subsection p {
@@ -531,8 +574,55 @@ body {
     text-align: center;
 }
 
-.project-subsection__title a{
+.project-subsection a:link, .project-subsection a:visited {
     /* Text */
-    color: white;
+
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.project-subsection a:hover {
+    /* Text */
+    text-decoration: underline !important;
+}
+
+
+/* For Mobile Devices */
+
+@media (max-width: 1000px) {
+    .container {
+        /* Margins */
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        /* Layout */
+        display: grid;
+        grid-gap: 15px;
+        grid-template: 
+        "header header header"
+        "main main main"
+        "footer footer footer" /
+        1fr;
+    }
+
+    #header {
+        /* Padding */
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header__button-banner {
+        /* Layout */
+        display: none;
+    }
+
+    .sidebar {
+        /* Layout */
+        display: none;
+    }
 }
 
