@@ -564,12 +564,24 @@ body {
     margin-right: 5px;
 }
 
+.project-subsection {
+    /* Layout */
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .project-subsection__title{
     /* Text */
     text-align: center;
 }
 
 .project-subsection p {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     /* Text */
     text-align: center;
 }
@@ -623,6 +635,11 @@ body {
     .sidebar {
         /* Layout */
         display: none;
+    }
+
+    .project-subsection {
+        /* Layout */
+        flex-direction: column;
     }
 }
 
