@@ -15,17 +15,18 @@
     --light-background-color: #d34949;
 
     --light-element-background-color: linear-gradient(190deg,red, black);
-    --light-button-background: linear-gradient(0deg, brown, maroon, brown);
+    --light-button-background: linear-gradient(to bottom, brown, maroon, brown);
 
     /* Dark Mode */
-    --dark-border-color: rgb(89, 0, 255);
+    --dark-border-color: rgb(0, 64, 160);
     --dark-site-background-image: url("/assets/images/WallpaperDark.png");
     --dark-background-color: #18002c;
 
     --dark-element-background-color: linear-gradient(190deg,rgb(26, 0, 36), rgb(0, 30, 68));
+    --dark-button-background: linear-gradient(to bottom, grey, black, rgb(0, 0, 36));
 }
 
-/* Light Mode */
+/* Light Mode - DEFAULT*/
 
 body {
     /* Background */
@@ -44,6 +45,13 @@ body {
     border: var(--theme-border-style);
     border-color: var(--light-border-color);
     border-radius: var(--theme-border-radius);
+
+    /* Background */
+    background-color: white;
+    background-image: var(--light-element-background-color);
+
+    /* Misc */
+    box-shadow: var(--theme-box-shadow);
 }
 
 #main {
@@ -72,6 +80,96 @@ body {
     box-shadow: 0 0 10px 2px white;
 }
 
+.sidebar {
+    /* Border */
+    border: var(--theme-border-style);
+    border-color: var(--light-border-color);
+    border-radius: var(--theme-border-radius);
+
+    /* Background */
+    background-color: white;
+    background-image: var(--light-element-background-color);
+
+    /* Misc */
+    box-shadow: var(--theme-box-shadow);
+}
+
+.nav-menu nav {
+    /* Background */
+    background-color: rgba(0, 0, 0, 0.6);
+
+    /* Border */
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.nav-menu__cat-title {
+    /* Text */
+    color: lightpink;
+
+    font-size: 1.5em;
+
+    font-weight: bolder;
+
+    text-shadow: 0px 0px 6px black;
+}
+
+.nav-menu__nav::before {
+    /* Background */
+    background-color: salmon;
+
+    /* Border */
+    border-radius: 20px;
+
+    /* Layout */
+    display: block;
+
+    position: absolute;
+    top: 0px;
+    left: 3px;
+
+    width: 151px;
+    height: 15px;
+
+    /* Misc */
+    content: '';
+    text-align: center;
+    opacity: 0.3;
+}
+
+.nav-menu__nav {
+    /* Background */
+    background-color: firebrick;
+    background-image: var(--light-button-background);
+
+    /* Border */
+    border: 2px solid maroon;
+    border-radius: 5px;
+
+    /* Text */
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.nav-menu__nav:hover {
+     /* Background */
+    background-color: lightcoral;
+    background-image: linear-gradient(0deg, lightcoral, firebrick, lightcoral);
+
+    /* Border */
+    border: 2px solid firebrick;
+}
+
+.nav-menu__nav--active {
+    /* Background */
+    background-color: salmon;
+
+    /* Text */
+    font-weight: bold;
+    color: salmon;
+}
+
 
 /* Dark Mode */
 
@@ -87,6 +185,82 @@ body {
     /* Background */
     background-color: black;
     background-image: var(--dark-element-background-color);
+}
+
+.dark-mode .nav-menu__cat-title {
+    /* Text */
+    color: skyblue;
+
+    font-size: 1.5em;
+
+    font-weight: bolder;
+
+    text-shadow: 
+    0px 2px 5px blue,
+    0px -2px 5px blue,
+    2px 0px 5px blue,
+    -2px 0px 5px blue;
+}
+
+.dark-mode .nav-menu__nav::before {
+    /* Background */
+    background-color: grey;
+
+    /* Border */
+    border-radius: 20px;
+
+    /* Layout */
+    display: block;
+
+    position: absolute;
+    top: 0px;
+    left: 3px;
+
+    width: 151px;
+    height: 10px;
+
+    /* Misc */
+    content: '';
+    text-align: center;
+    opacity: 0.25;
+}
+
+.dark-mode .nav-menu__nav {
+    /* Background */
+    background-color: black;
+    background-image: var(--dark-button-background);
+
+    /* Border */
+    border: 2px solid black;
+    border-radius: 5px;
+
+    /* Text */
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.dark-mode .nav-menu__nav:hover::before {
+    /* Misc */
+    opacity: 0;
+}
+
+.dark-mode .nav-menu__nav:hover {
+     /* Background */
+    background-color: darkgrey;
+    background-image: linear-gradient(to bottom, rgb(21, 0, 99), black, rgb(21, 0, 99));
+
+    /* Border */
+    border: 2px solid black;
+}
+
+.dark-mode .nav-menu__nav--active {
+    /* Background */
+    background-color: darkblue;
+
+    /* Text */
+    font-weight: bold;
+    color: deepskyblue;
 }
 
 /* Christmas Theme */
