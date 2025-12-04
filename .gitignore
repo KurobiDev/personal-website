@@ -23,6 +23,3 @@ public/projects/webdev/GachaClicker/
 
 # Track these files, if they exist
 !.gitignore
-
-# Do not reveal the snow, for now.
-public/assets/js/snow.js
