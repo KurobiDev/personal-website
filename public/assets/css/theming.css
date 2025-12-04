@@ -1,0 +1,103 @@
+/* SITE THEMES */
+
+:root {
+    --site-font-size: 14pt;
+    --site-font-family: Arial, Helvetica, sans-serif;
+
+    /* Theme - BORDERS*/
+    --theme-border-style: 3px solid;
+    --theme-border-radius: 10px;
+    --theme-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+
+    /* Light Mode */
+    --light-border-color: rgb(0, 0, 0);
+    --light-site-background-image: url("/assets/images/Wallpaper.png");
+    --light-background-color: #d34949;
+
+    --light-element-background-color: linear-gradient(190deg,red, black);
+    --light-button-background: linear-gradient(0deg, brown, maroon, brown);
+
+    /* Dark Mode */
+    --dark-border-color: rgb(89, 0, 255);
+    --dark-site-background-image: url("/assets/images/WallpaperDark.png");
+    --dark-background-color: #18002c;
+
+    --dark-element-background-color: linear-gradient(190deg,rgb(26, 0, 36), rgb(0, 30, 68));
+}
+
+/* Light Mode */
+
+body {
+    /* Background */
+    background-color: var(--light-background-color);
+    background-image: var(--light-site-background-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Misc */
+    overflow-x: hidden;
+}
+
+.header__button-banner {
+    /* Border */
+    border: var(--theme-border-style);
+    border-color: var(--light-border-color);
+    border-radius: var(--theme-border-radius);
+}
+
+#main {
+    /* Border */
+    border: var(--theme-border-style);
+    border-color: var(--light-border-color);
+    border-radius: var(--theme-border-radius);
+
+    /* Background */
+    background-color: white;
+    background-image: var(--light-element-background-color);
+
+    /* Misc */
+    box-shadow: var(--theme-box-shadow);
+}
+
+#main hr {
+    /* Background */
+    background-color: white;
+
+    /* Border */
+    border: 2px solid white;
+    border-radius: 2px;
+
+    /* Misc */
+    box-shadow: 0 0 10px 2px white;
+}
+
+
+/* Dark Mode */
+
+.dark-mode {
+    background-color: var(--dark-background-color);
+    background-image: var(--dark-site-background-image);
+}
+
+.dark-mode #main, .dark-mode .sidebar, .dark-mode .header__button-banner {
+    /* Border */
+    border-color: var(--dark-border-color);
+
+    /* Background */
+    background-color: black;
+    background-image: var(--dark-element-background-color);
+}
+
+/* Christmas Theme */
+
+#snow {
+    /* Layout */
+    display: none;
+}
+
+.xmas #snow{
+    /* Layout */
+    display: block;
+}
+

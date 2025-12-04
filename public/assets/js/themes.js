@@ -7,7 +7,35 @@
     The script should run when the site loads.
 */
 
-function init_theme()
+const themes = {
+    xmas: 'xmas'
+}
+
+function init_theme(theme)
 {
     console.log("W.I.P. - Theme initiation");
+    document.body.classList.add(theme);
 }
+
+function reset_themes()
+{
+    document.body.removeAttribute("class")
+}
+
+function xmas_theme() 
+{
+    const today = new Date();
+
+    const begin_date = new Date(today.getFullYear(),11,24);
+    const end_date = new Date(today.getFullYear(),11,27);
+
+    if (today >= begin_date && today < end_date) {
+        console.log("IT'S CHRISTMAS!!!");
+        init_theme(themes.xmas);
+    } else {
+       console.log("It's not christmas."); 
+    }
+
+}
+
+window.onload = xmas_theme();

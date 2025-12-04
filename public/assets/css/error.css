@@ -4,7 +4,8 @@
 
 body, html {
     background-color: #000;
-    background-image: url("/assets/images/background.gif");
+    background-image: url("/assets/images/WallpaperDark.png");
+    background-size: cover;
 
     color: #fff;
 

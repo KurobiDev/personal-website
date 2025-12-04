@@ -1,0 +1,37 @@
+/* Site Info element - a fastfetch-like window */
+
+#text-info {
+    display: none;
+}
+
+#fetch {
+    margin: 15px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    border: 1px solid white;
+    background-color: black;
+}
+
+#title {
+    background-color: white;
+
+    color: black;
+    margin: 0;
+    width: 100%;
+}
+
+.key {
+    font-weight: bold;
+    color: brown;
+}
+
+@media(max-width: 600px) {
+    #fetch {
+        display: none;
+    }
+
+    #text-info {
+        display: block;
+    }
+}
