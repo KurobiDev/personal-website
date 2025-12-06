@@ -14,7 +14,7 @@
     --light-site-background-image: url("/assets/images/Wallpaper.png");
     --light-background-color: #d34949;
 
-    --light-element-background-color: linear-gradient(190deg,red, black);
+    --light-element-background-color: linear-gradient(190deg,darkred, rgb(78, 0, 0));
     --light-button-background: linear-gradient(to bottom, brown, maroon, brown);
 
     /* Dark Mode */

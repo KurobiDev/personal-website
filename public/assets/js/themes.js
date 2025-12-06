@@ -8,18 +8,22 @@
 */
 
 const themes = {
+    default: 'none',
+    dark: 'dark-mode',
     xmas: 'xmas'
 }
 
 function init_theme(theme)
 {
     console.log("W.I.P. - Theme initiation");
+    localStorage.setItem("theme", theme)
     document.body.classList.add(theme);
 }
 
 function reset_themes()
 {
-    document.body.removeAttribute("class")
+    localStorage.setItem("theme", 'none');
+    document.body.removeAttribute("class");
 }
 
 function xmas_theme() 
@@ -38,4 +42,22 @@ function xmas_theme()
 
 }
 
-window.onload = xmas_theme();
+function load_themes()
+{
+    if(localStorage.getItem("theme")) {
+        init_theme(localStorage.getItem("theme"));
+    } else {
+        localStorage.setItem("theme", 'none');
+    }
+}
+
+function toggle_modes()
+{
+    if(localStorage.getItem("theme") === 'none') {
+        init_theme(themes.dark);
+    } else {
+        reset_themes();
+    }
+}
+
+window.onload = load_themes();
