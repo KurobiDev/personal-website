@@ -40,14 +40,19 @@ body {
     font-family: var(--site-font-family);
     font-size: var(--site-font-size);
     color: white;
+
+    height: 100vh;
 }
 
 .container {
-    /* Positioning */
-    margin-top: 30px;
+    /* Margins */
+    margin-top: 0;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+
+    /* Padding */
+    padding-top: 30px;
 
     /* Layout */
     max-width: 1500px;

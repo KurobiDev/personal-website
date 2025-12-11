@@ -10,19 +10,21 @@
     <meta name="author" content="BlackFlame">
     <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
 
-    <link rel="stylesheet" href="./assets/css/main.css?nocache=1765019595854">
-    <link rel="stylesheet" href="./assets/css/misc.css?nocache=1765019595854">
-    <link rel="stylesheet" href="./assets/css/theming.css?nocache=1765019595854">
+    <link rel="stylesheet" href="./assets/css/main.css?nocache=1765453555684">
+    <link rel="stylesheet" href="./assets/css/misc.css?nocache=1765453555684">
+    <link rel="stylesheet" href="./assets/css/theming.css?nocache=1765453555684">
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
 </head>
-<body>
-    <noscript>
-        <dialog id="no-js" open>
-            <p>
-                Please enable JavaScript on your browser, or switch to one with JS support.
-            </p>
-        </dialog>
-    </noscript>
+<body class="xmas">
+    <div class="theme-changer">
+        <div class="theme-changer__buttons">
+            <button id="dark-mode" onclick="init_theme(themes.default)">Default Red</button>
+            <button id="dark-mode" onclick="init_theme(themes.dark)">Midnight</button>
+        </div>
+        <div class="theme-changer__close-button">
+            <button id="toggle-changer" onclick="toggle_hide()">>></button>
+        </div>
+    </div>
     <div class="container">
         <div id="header">
             <div class="header__banner">
@@ -54,6 +56,11 @@
             <div class="header__announcement">
                 <p>This site is currently under construction.</p>
             </div>
+            <noscript>
+                <div class="header__announcement header__announcement--alert">
+                    <p>Please enable Javascript on your browser.</p>
+                </div>
+            </noscript>
         </div>
         <div id="main">
             
@@ -188,7 +195,6 @@
                         <a class="nav-menu__nav" href="/projects/art">Art</a>
                         <a class="nav-menu__nav" href="/projects/misc">Misc</a>
                     </nav>
-                    <button onclick="toggle_modes()">Switch modes</button>
                 </div>
             </div>
             <div id="time">
@@ -212,6 +218,7 @@
             Hosted on <a href="https://neocities.org">Neocities</a> <br>
         </div>
     </div>
+
     <!-- SCRIPTS -->
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/clock.js"></script>

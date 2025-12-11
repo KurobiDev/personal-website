@@ -146,3 +146,64 @@
     /* Transforming */
     transform: scale(1.25);
 }
+
+/* Theme switcher */
+
+.theme-changer{
+    /* Margins */
+    margin-top: 0;
+    margin-left: 0;
+
+    display: flex;
+    align-items: flex-start;
+
+    position: fixed;
+    z-index: 1;
+}
+
+.theme-changer__buttons {
+    padding: 10px;
+
+    background-color: rgba(0, 0, 0, 0.473);
+
+    border: 1px solid grey;
+
+    display: none;
+}
+
+.theme-changer button {
+    /* Padding */
+    padding: 5px;
+
+    /* Background */
+    background-color: rgba(59, 59, 59, 0.473);
+    background-image: linear-gradient(
+        to bottom, 
+        grey 10%, 
+        black 50% 60%
+        );
+
+    /* Border */
+    border: 2px solid black;
+    border-radius: 5px;
+
+    /* Text */
+    color: #fff;
+}
+
+.theme-changer button:hover {
+
+    /* Background */
+    background-color: rgba(59, 59, 59, 0.473);
+    background-image: linear-gradient(
+        to bottom, 
+        grey, 
+        black,
+        grey
+        );
+}
+
+.theme-changer__close-button button{
+    /* Border */
+    border-radius: 0 5px 5px 0;
+}

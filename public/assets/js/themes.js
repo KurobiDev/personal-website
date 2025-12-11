@@ -13,10 +13,13 @@ const themes = {
     xmas: 'xmas'
 }
 
+var panel_hidden = true;
+
 function init_theme(theme)
 {
     console.log("W.I.P. - Theme initiation");
     localStorage.setItem("theme", theme)
+    document.body.removeAttribute("class");
     document.body.classList.add(theme);
 }
 
@@ -26,7 +29,7 @@ function reset_themes()
     document.body.removeAttribute("class");
 }
 
-function xmas_theme() 
+function isXmas() 
 {
     const today = new Date();
 
@@ -35,10 +38,11 @@ function xmas_theme()
 
     if (today >= begin_date && today < end_date) {
         console.log("IT'S CHRISTMAS!!!");
-        init_theme(themes.xmas);
+        return true
     } else {
        console.log("It's not christmas."); 
     }
+    return false;
 
 }
 
@@ -47,16 +51,26 @@ function load_themes()
     if(localStorage.getItem("theme")) {
         init_theme(localStorage.getItem("theme"));
     } else {
-        localStorage.setItem("theme", 'none');
+        init_theme("none");
+    }
+
+    if(isXmas()) {
+        init_theme(themes.xmas);
     }
 }
 
-function toggle_modes()
-{
-    if(localStorage.getItem("theme") === 'none') {
-        init_theme(themes.dark);
+function toggle_hide() {
+    const hide_button = document.getElementById("toggle-changer");
+    const theme_panel = document.getElementsByClassName("theme-changer__buttons")[0];
+
+    if(panel_hidden) {
+        panel_hidden = false
+        hide_button.innerHTML = "<<";
+        theme_panel.style.display = 'block';
     } else {
-        reset_themes();
+        panel_hidden = true
+        hide_button.innerHTML = ">>"
+        theme_panel.style.display = 'none';
     }
 }
 
