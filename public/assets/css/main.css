@@ -55,7 +55,7 @@ body {
     padding-top: 30px;
 
     /* Layout */
-    max-width: 1500px;
+    max-width: 1550px;
 
     display: grid;
     grid-gap: 15px;
@@ -63,7 +63,7 @@ body {
         "header header header"
         "left-sidebar main right-sidebar"
         "footer footer footer" /
-        200px 1fr 200px;
+        210px 1fr 210px;
 }
 
 #header {
@@ -76,8 +76,8 @@ body {
     /* Padding */
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 215px;
-    padding-right: 215px;
+    padding-left: 225px;
+    padding-right: 225px;
 
     /* Layout */
     grid-area: header;
@@ -223,8 +223,8 @@ body {
     margin-right: 0;
 
     /* Padding */
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -355,6 +355,11 @@ body {
     text-align: center;
 }
 
+.button {
+    /* Margins */
+    margin: 0 2px;
+}
+
 .button-gallery {
     /* Margins */
     margin-top: 0;
@@ -374,15 +379,6 @@ body {
     justify-content: space-evenly;
 
 }
-
-.button {
-    /* Margins */
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 .section {
     /* Margins */
     margin: 0 auto;
