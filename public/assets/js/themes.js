@@ -66,7 +66,7 @@ function toggle_hide() {
     if(panel_hidden) {
         panel_hidden = false
         hide_button.innerHTML = "<<";
-        theme_panel.style.display = 'block';
+        theme_panel.style.display = 'flex';
     } else {
         panel_hidden = true
         hide_button.innerHTML = ">>"

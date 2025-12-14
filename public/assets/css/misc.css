@@ -169,9 +169,19 @@
     border: 1px solid grey;
 
     display: none;
+    flex-direction: column;
+}
+
+.theme-changer__buttons button {
+    /* Margins */
+    margin: 5px 0;
+
+    /* Padding */
+    padding: 10px 20px !important;
 }
 
 .theme-changer button {
+
     /* Padding */
     padding: 5px;
 
