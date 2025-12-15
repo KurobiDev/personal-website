@@ -4,25 +4,8 @@
     --site-font-size: 14pt;
     --site-font-family: Arial, Helvetica, sans-serif;
 
-    /* Theme - BORDERS*/
-    --theme-border-style: 3px solid;
-    --theme-border-radius: 10px;
-    --theme-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-
-    /* Light Mode */
-    --light-border-color: rgb(0, 0, 0);
-    --light-site-background-image: url("/assets/images/Wallpaper.png");
-    --light-background-color: #d34949;
-
-    --light-element-background-color: linear-gradient(190deg,red, black);
-    --light-button-background: linear-gradient(0deg, brown, maroon, brown);
-
-    /* Dark Mode*/
-    --dark-border-color: rgb(89, 0, 255);
-    --dark-site-background-image: url("/assets/images/WallpaperDark.png");
-    --dark-background-color: #18002c;
-
-    --dark-element-background-color: linear-gradient(190deg,rgb(26, 0, 36), rgb(0, 30, 68));
+    /* Basic site - BORDERS*/
+    --site-border-style: 1px solid black;
 }
 
 * {
@@ -39,7 +22,6 @@ body {
     /* Text */
     font-family: var(--site-font-family);
     font-size: var(--site-font-size);
-    color: white;
 
     height: 100vh;
 }
@@ -106,6 +88,9 @@ body {
     padding-bottom: 15px;
     padding-left: 0;
     padding-right: 0;
+
+    /* Border */
+    border: var(--site-border-style);
 }
 
 .header__announcement {
@@ -122,16 +107,10 @@ body {
     padding-right: 0;
 
     /* Border */
-    border: var(--theme-border-style);
-    border-color: black;
-    border-radius: 5px;
+    border: var(--site-border-style);
 
     /* Background */
-    background-color: darkorange;
-    background-image: linear-gradient( 90deg, darkslateblue, darkorchid);
-
-    /* Misc */
-    box-shadow: var(--theme-box-shadow);
+    background-color: darkslateblue;
 
 }
 
@@ -149,7 +128,6 @@ body {
 .header__announcement--alert {
      /* Background */
     background-color: red;
-    background-image: linear-gradient( 90deg, red, orangered);
 }
 
 .header__button-banner marquee {
@@ -173,6 +151,8 @@ body {
     /* Layout */
     grid-area: main;
 
+    /* Border */
+    border: var(--site-border-style);
 }
 
 #main hr {
@@ -183,28 +163,9 @@ body {
     margin-right: 0;
 }
 
-#main a:link {
-    /* Text */
-    color: darkgray;
-    text-decoration: underline;
-}
-
-#main a:hover {
-    /* Text */
-    color: rgb(255, 255, 255) !important;
-    text-shadow: 2px 2px 5px black;
-}
-
-#main a:visited {
-    /* Text */
-    color: gray;
-}
-
 .section__title {
     /* Text */
     text-align: center;
-
-    text-shadow: 1px 1px 5px black;
 }
 
 .section p {
@@ -213,6 +174,9 @@ body {
     margin-bottom: 15px;
     margin-left: 15px;
     margin-right: 15px;
+
+    /* Text */
+    text-align: justify;
 }
 
 .sidebar {
@@ -227,6 +191,9 @@ body {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
+
+    /* Border */
+    border: var(--site-border-style);
 }
 
 .sidebar--left {
@@ -263,16 +230,6 @@ body {
     text-shadow: 2px 2px 2px black;
 }
 
-#footer a {
-    /* Text */
-    color: white;
-}
-
-#footer a:hover {
-    /* Text */
-    color: darkgray;
-}
-
 .nav-menu {
     /* Margins */
     margin-top: 0;
@@ -296,6 +253,9 @@ body {
 
     /* Padding */
     padding: 5px;
+
+    /* Border */
+    border: var(--site-border-style);
 }
 
 .nav-menu__nav, .nav-menu__cat-title {
@@ -310,6 +270,9 @@ body {
     padding-bottom: 3px;
     padding-left: 0;
     padding-right: 0;
+
+    /* Border */
+    border: var(--site-border-style);
 
     /* Layout */
     position: relative;
@@ -338,7 +301,7 @@ body {
     text-align: center;
 }
 
-#time {
+#time, #social, #link-button {
     /* Text */
     text-align: center;
 }
@@ -348,11 +311,6 @@ body {
     /* Font */
     font-weight: bold;
     font-size: 2em;
-}
-
-#social {
-    /* Text */
-    text-align: center;
 }
 
 .button {
@@ -409,16 +367,10 @@ body {
     text-align: center;
 }
 
-.project-subsection a:link, .project-subsection a:visited {
-    /* Text */
-
-    color: white !important;
-    text-decoration: none !important;
-}
-
-.project-subsection a:hover {
-    /* Text */
-    text-decoration: underline !important;
+#snow {
+    /* Layout */
+    display: none;
+    z-index: 9;
 }
 
 

@@ -1,3 +1,9 @@
+:root {
+    --project-border: 1px solid black;
+    --project-background-color: white;
+    --project-text-color: black;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,51 +18,92 @@ body {
     margin: 0 auto;
 }
 
-header {
-    text-align: center;
-}
+.header {
+    /* Margins */
+    margin: 10px 25%;
 
-header, main, footer {
+    /* Padding */
     padding: 10px;
-    margin: 10px;
-}
 
-footer {
-    text-align: center;
+    /* Border */
+    border: var(--project-border);
 
-    font-size: .8em;
-}
-
-header h1 {
-    font-size: 2.5em;
-}
-
-main section h1 {
-    font-size: 2.2em;
-}
-
-main section h1, main section h2, main section h3, main section .gallery {
+    /* Text */
     text-align: center;
 }
 
-.subsection-download {
+.main {
+    /* Margins */
+    margin: 10px auto;
+
+    /* Padding */
+    padding: 0;
+}
+
+.main .introduction {
+    /* Margins */
+    margin: 10px 15%;
+
+    /* Padding */
+    padding: 5px 10px;
+
+    /* Border */
+    border: var(--project-border);
+}
+
+.section {
+    /* Margins */
+    margin: 10px 0;
+
+    /* Padding */
+    padding: 5px 15px;
+
+    /* Border */
+    border: var(--project-border);
+
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+}
+
+.section__title {
+    /* Text */
     text-align: center;
 }
 
-.subsection-download sub{
-    font-size: .7em;
+.section__content {
+    /* Margins */
+    margin: 0;
+
+    /* Text */
+    text-align: justify;
 }
 
-@media (max-width: 1000px) {
-    body {
-        text-align: center;
-    }
+.section__download {
+    /* Margins */
+    margin: 5px auto;
 
-    .container {
-        width: 100%;
-    }
-
-    .container .gallery img {
-        width: 300px;
-    }
+    /* Text */
+    text-align: center;
 }
+
+.footer {
+    /* Margins */
+    margin: 10px 25%;
+
+    /* Padding */
+    padding: 10px;
+
+    /* Border */
+    border: var(--project-border);
+
+    /* Text */
+    text-align: center;
+    font-size: small;
+}
+
+/* ================================ */
+/*              THEMES              */
+/* ================================ */
+
+/* body .halflife {}*/

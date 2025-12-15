@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Kurobi's personal site.">
+    <meta name="author" content="Kurobi">
+    <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
+
+    <link rel="stylesheet" href="{{ nesting }}assets/css/project.css{{ nocache }}">
+    <link rel="stylesheet" href="{{ nesting }}assets/css/misc.css{{ nocache }}">
+    <link rel="icon" href="{{ nesting }}assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body class="doom">
+    <div class="container">
+        <div class="header">
+            <img src="{{ nesting }}assets/images/works/games/titles/{{ headersrc }}" alt="{{ headertext }}" width="400px">
+            <br>
+            <a href="{{ nesting }}projects/games">Go back to home page.</a>
+        </div>
+        <div class="main">
+            {{ content | safe }}
+        </div>
+        <div class="footer">
+            &copy; Kurobi 2025
+        </div>
+    </div>
+</body>
+</html>

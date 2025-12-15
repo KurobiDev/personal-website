@@ -21,5 +21,8 @@ node_modules/
 # Web Projects - These will have separate repositories
 public/projects/webdev/GachaClicker/
 
+# Files for sharing - those should be hidden from the repo
+public/files/
+
 # Track these files, if they exist
 !.gitignore
