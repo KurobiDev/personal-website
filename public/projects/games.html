@@ -10,15 +10,15 @@
     <meta name="author" content="BlackFlame">
     <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
 
-    <link rel="stylesheet" href="../assets/css/main.css?nocache=1766317649612">
-    <link rel="stylesheet" href="../assets/css/misc.css?nocache=1766317649612">
-    <link rel="stylesheet" href="../assets/css/theming.css?nocache=1766317649612">
+    <link rel="stylesheet" href="../assets/css/main.css?nocache=1766319712112">
+    <link rel="stylesheet" href="../assets/css/misc.css?nocache=1766319712112">
+    <link rel="stylesheet" href="../assets/css/theming.css?nocache=1766319712112">
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="theme-changer">
         <div class="theme-changer__buttons">
-            <button id="dark-mode" onclick="init_theme(themes.default)">Default Red</button>
+            <button id="default" onclick="init_theme(themes.default)">Default Red</button>
             <button id="dark-mode" onclick="init_theme(themes.dark)">Midnight</button>
         </div>
         <div class="theme-changer__close-button">
@@ -146,6 +146,11 @@
                         <a class="nav-menu__nav" href="/projects/art">Art</a>
                         <a class="nav-menu__nav" href="/projects/misc">Misc</a>
                     </nav>
+                    <nav>
+                        <div class="nav-menu__cat-title">Misc</div>
+                        <a class="nav-menu__nav" href="/v99/">v99</a>
+                        <a class="nav-menu__nav" href="/sitemap">Sitemap</a>
+                    </nav>
                 </div>
             </div>
             <div id="time">
@@ -158,7 +163,7 @@
                     <a href="https://kurobi.neocities.org"><img src="../assets/images/88x31.gif" alt="Kurobi"></a>
                 </div>
                 <br>
-                <textarea name="link-button-text" id="link-button-text"><a href="https://kurobi.neocities.org"><img src="../assets/images/88x31.gif" alt="Kurobi"></a></textarea>
+                <button class="copy-button" onclick="copyButton();">Copy me!</button>
             </div>
             <div id="social">
                 <h4>Where to find me</h4>
@@ -176,7 +181,10 @@
             </div>
         </div>
         <div class="sidebar sidebar--right">
-            Lorem ipsum dolor sit amet.
+            <div id="counter">
+                <h4>Visits Counter</h4>
+                <script type="text/javascript" src="https://counter.websiteout.com/js/6/0/0/0"></script>
+            </div>
         </div>
         <div id="footer">
             &copy; Kurobi 2025 <br>
@@ -185,9 +193,9 @@
     </div>
 
     <!-- SCRIPTS -->
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/clock.js"></script>
-    <script src="../assets/js/themes.js"></script>
-    <script src="../assets/js/snow.js"></script>
+    <script async src="../assets/js/themes.js"></script>
+    <script async src="../assets/js/main.js"></script>
+    <script async src="../assets/js/clock.js"></script>
+    <script async src="../assets/js/snow.js"></script>
 </body>
 </html>

@@ -301,7 +301,7 @@ body {
     text-align: center;
 }
 
-#time, #social, #link-button {
+#time, #social, #link-button, #counter {
     /* Text */
     text-align: center;
 }
@@ -311,11 +311,6 @@ body {
     /* Font */
     font-weight: bold;
     font-size: 2em;
-}
-
-.button {
-    /* Margins */
-    margin: 0 2px;
 }
 
 .button-gallery {

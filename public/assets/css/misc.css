@@ -1,5 +1,16 @@
 /* MISCELLANEOUS */
 
+/* Buttons */
+.button {
+    /* Margins */
+    margin: 3px;
+}
+
+.button img {
+    /* Shading */
+    box-shadow: 2px 2px 5px black;
+}
+
 /* Site Info element - a fastfetch-like window */
 
 #text-info {
@@ -179,7 +190,7 @@
     padding: 10px 20px !important;
 }
 
-.theme-changer button {
+.theme-changer button, .copy-button {
 
     /* Padding */
     padding: 5px;
@@ -200,7 +211,7 @@
     color: #fff;
 }
 
-.theme-changer button:hover {
+.theme-changer button:hover, .copy-button:hover {
 
     /* Background */
     background-color: rgba(59, 59, 59, 0.473);

@@ -15,3 +15,11 @@ const navlinks = document.querySelectorAll(".nav-menu__nav");
         }
     }
 });
+
+// copy the link button code to clipboard
+function copyButton() {
+    var copytext = '<a href="https://kurobi.neocities.org"><img src="https://kurobi.neocities.org/assets/images/88x31.gif" alt="Kurobi"></a>'
+
+    navigator.clipboard.writeText(copytext);
+    alert("Copied the button.")
+}
