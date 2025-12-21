@@ -1,5 +1,4 @@
 :root {
-    --project-border: 1px solid black;
     --project-background-color: white;
     --project-text-color: black;
 }
@@ -20,13 +19,10 @@ body {
 
 .header {
     /* Margins */
-    margin: 10px 25%;
+    margin: 10px 0;
 
     /* Padding */
     padding: 10px;
-
-    /* Border */
-    border: var(--project-border);
 
     /* Text */
     text-align: center;
@@ -40,15 +36,12 @@ body {
     padding: 0;
 }
 
-.main .introduction {
+.introduction {
     /* Margins */
     margin: 10px 15%;
 
     /* Padding */
     padding: 5px 10px;
-
-    /* Border */
-    border: var(--project-border);
 }
 
 .section {
@@ -57,9 +50,6 @@ body {
 
     /* Padding */
     padding: 5px 15px;
-
-    /* Border */
-    border: var(--project-border);
 
     /* Layout */
     display: flex;
@@ -89,13 +79,10 @@ body {
 
 .footer {
     /* Margins */
-    margin: 10px 25%;
+    margin: 10px 0;
 
     /* Padding */
     padding: 10px;
-
-    /* Border */
-    border: var(--project-border);
 
     /* Text */
     text-align: center;
@@ -106,4 +93,28 @@ body {
 /*              THEMES              */
 /* ================================ */
 
-/* body .halflife {}*/
+/*.halflife {}*/
+
+.doom {
+    background-color: #443118;
+    background-image: url(../images/works/backgrounds/doombg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: red;
+}
+
+.doom .header a:link, .doom .header a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.doom .header a:hover {
+    text-decoration: underline;
+}
+
+.doom .container {
+    padding: 10px;
+
+    background-color: rgba(0, 0, 0, 0.75);
+}

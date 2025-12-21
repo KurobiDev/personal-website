@@ -6,128 +6,75 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Collection of DOOM WADs created by me - BlackFlame (Kurobi)">
-    <meta name="author" content="BlackFlame">
+    <meta name="description" content="Kurobi's personal site.">
+    <meta name="author" content="Kurobi">
+    <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
 
-    <link rel="stylesheet" href="../../assets/css/project.css">
+    <link rel="stylesheet" href="../../assets/css/project.css?nocache=1766317649612">
+    <link rel="stylesheet" href="../../assets/css/misc.css?nocache=1766317649612">
     <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
-
-    <style>
-        body{
-            background-color: rgb(34, 129, 167);
-            color: #fff;
-        }
-
-        header, main, footer {
-            background-color: rgba(0, 0, 0, 0.596);
-            border: 3px dashed black;
-            border-radius: 25px;
-        }
-
-        #return a:link, #return a:visited{
-            color: #fff;
-        }
-
-        a:link, a:visited{
-            color: #ff0000;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @media (min-width: 800px) {
-            #info-screen {
-                width: 600px;
-                margin: auto;
-                padding: 5px;
-
-                border: 2px solid black;
-                background-color: beige;
-                color: black;
-            }
-
-            #info-screen h1 {
-                font-family: 'Times New Roman', Times, serif;
-            }
-
-            #info-screen h1, #info-screen h3 {
-                text-align: left;
-            }
-        }
-    </style>
-
-    <!--<script src="../main.js?nocache=1756797607925"></script>-->
 </head>
-<body>
+<body class="climber">
     <div class="container">
-        <header>
-            <h1>Tower Climber</h1>
-            <div id="return">
-                <a href="../games.html">Return to Gamedev Projects Page</a>
+        <div class="header">
+            <img src="../../assets/images/works/games/titles/" alt="Tower Climber" width="400px">
+            <br>
+            <a href="../../projects/games">Go back to home page.</a>
+        </div>
+        <div class="main">
+            <div class="introduction">
+    <p>
+        A small game I made as a school project in 2020. It's basically a simple platformer.
+    </p>
+</div>
+<hr>
+<div class="section">
+    <div class="section__content">
+        <p>
+            A small platformer game, mixing Icy Tower's vertical gameplay with Mario's mechanics. A simple project made in old trial version of GameMaker Studio. <br>
+            I plan to remake this game on a different engine or using a framework.
+        </p>
+        <p>
+            <div class="gallery" style="margin: auto; max-width: 520px;">
+                <div class="gallery__picture">
+                    <a href="../../assets/images/works/games/screenshots/climber/screenshot1.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot1.png" alt="Screenshot 1"></a>
+                    <p class="picture-desc">
+                        First Level.
+                    </p>
+                </div>
+                <div class="gallery__picture">
+                    <a href="../../assets/images/works/games/screenshots/climber/screenshot2.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot2.png" alt="Screenshot 2"></a>
+                    <p class="picture-desc">
+                        Second Level.
+                    </p>
+                </div>
+                <div class="gallery__picture">
+                    <a href="../../assets/images/works/games/screenshots/climber/screenshot3.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot3.png" alt="Screenshot 3"></a>
+                    <p class="picture-desc">
+                        Penultimate level.
+                    </p>
+                </div>
+                <div class="gallery__picture">
+                    <a href="../../assets/images/works/games/screenshots/climber/screenshot4.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot4.png" alt="Screenshot 4"></a>
+                    <p class="picture-desc">
+                        Main Menu.
+                    </p>
+                </div>
             </div>
-        </header>
-        <main>
-            <section>
-                <h1>About</h1>
-                    <div class="project-subsection">
-                        <p>
-                            A simple school project I did in 2019. A simple game, where you play as a white square and climg your way up to the top of the titualr tower. Each level has a different theme, ranging from standard bricks to vulcanic theme.
-                        </p>
-                        <p>
-                            Whole project was made using Game Maker Studio 8 Lite, with limited capabilities. As a result some of the planned elements such as bricks with varying friction were ultimately scrapped from the game.
-                        </p>
-                        <p>
-                            I had an idea to remake this game on a different engine or using a framework.
-                        </p>
-                        <h3>INFO:</h3>
-                        <div id="info-screen">
-                            <h1>Tower climber v. 1.0.0</h1>
-                            This game is a school project - it's a simple platformer, where you need to get to the top of the tower.
-                            Inspired by Icy Tower and Mario Bros. games.
-
-                            <h3>Floors (Levels):</h3>
-                            <ul>
-                                <li>Gray Bricks - Where you start the game - the easiest floor.</li>
-                                <li>Blue Bricks - More difficult than the gray floor - has more obstacles.</li>
-                                <li>Red Bricks - An intermission before the vulcanic floor with a lot of coins.</li>
-                                <li>Vulcanic - Hardest level in the game. Far more traps and far less platforms.</li>
-                                <li>Golden Bricks - Literal endgame - loads of coins.</li>
-                            </ul>
-
-                            <h3>Bugs:</h3>
-                            <ul>
-                                <li>Player Character can "bounce" off walls</li>
-                                <li>The jumping pad does not always work, the player has to jump.</li>
-                                <li>Faulty spike collision detection - the Player can touch them from the right side without consequences, but the opposite side actually kills the player.</li>
-                            </ul>
-                            <br>
-                            I had to scrap a few elements.
-                        </p>
-                        </div>
-                        <h3>Screenshots</h3>
-                        <div class="gallery">
-                            <div class="picture-element">
-                                <a href="../../assets/images/works/games/screenshots/climber/screenshot1.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot1.png" alt="Screenshot 1" width="400"></a>
-                                <a href="../../assets/images/works/games/screenshots/climber/screenshot2.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot2.png" alt="Screenshot 2" width="400"></a>
-                                <a href="../../assets/images/works/games/screenshots/climber/screenshot3.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot3.png" alt="Screenshot 3" width="400"></a>
-                                <a href="../../assets/images/works/games/screenshots/climber/screenshot4.png"><img src="../../assets/images/works/games/screenshots/climber/screenshot4.png" alt="Screenshot 4" width="400"></a>
-                            </div>
-                        </div>
-                        <h3>Downloads</h3>
-                        <div class="subsection-download">
-                            Coming Soon!
-                            <!--<a href="#">Download (50 KB)</a>
-                            <br>
-                            <sub>Last Updated: 03-09-2025</sub>-->
-                        </div>
-                    </div>
-            </section>
-        </main>
-        <footer>
-            &copy; BlackFlame (Kurobi) 2025
-        </footer>
+        </p>
+    </div>
+    <div class="section__download">
+        <!--Coming Soon!-->
+        <a href="#">Download (50 KB)</a>
+        <br>
+        <sub>Last Updated: 02-06-2020</sub>
+    </div>
+</div>
+<hr>
+        </div>
+        <div class="footer">
+            &copy; Kurobi 2025
+        </div>
     </div>
 </body>
 </html>
