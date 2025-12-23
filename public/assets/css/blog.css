@@ -3,7 +3,7 @@
     --site-font-family: Arial, Helvetica, sans-serif;
 
     /* Light Mode */
-    --site-background-image: url("/assets/images/background.gif");
+    --site-background-image: url("/assets/images/backgrounds/background.gif");
 
     --navbar-background-color: #d34949;
     --sidebar-background-color: #fff;
@@ -95,8 +95,9 @@ article  > h1 {
 }
 
 article {
-    padding: 5px;
+    padding: 30px;
     font-size: 12pt;
+    text-align: justify;
 }
 
 .blog-articles {

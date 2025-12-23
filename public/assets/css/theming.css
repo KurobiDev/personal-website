@@ -11,7 +11,7 @@
 
     /* Light Mode */
     --light-border-color: rgb(0, 0, 0);
-    --light-site-background-image: url("/assets/images/Wallpaper.png");
+    --light-site-background-image: url("/assets/images/backgrounds/Wallpaper.png");
     --light-background-color: #d34949;
 
     --light-element-background-color: linear-gradient(190deg,darkred, rgb(78, 0, 0));
@@ -19,11 +19,23 @@
 
     /* Dark Mode */
     --dark-border-color: rgb(0, 64, 160);
-    --dark-site-background-image: url("/assets/images/WallpaperDark.png");
+    --dark-site-background-image: url("/assets/images/backgrounds/WallpaperDark.png");
     --dark-background-color: #18002c;
 
     --dark-element-background-color: linear-gradient(190deg,rgb(26, 0, 36), rgb(0, 30, 68));
     --dark-button-background: linear-gradient(to bottom, grey, black, rgb(0, 0, 36));
+
+    /* Dreamy Theme */
+    --dreamy-border-color: #00eeff;
+
+    --dreamy-site-background-color: #1a456e;
+    --dreamy-site-background: url("/assets/images/backgrounds/");
+
+    --dreamy-main-background-color: #0027708f;
+    --dreamy-main-background: url("/assets/images/backgrounds/");
+
+    --dreamy-element-background-color: #0d1542;
+    --dreamy-element-background: url("/assets/images/backgrounds/");
 }
 
 /* ALL THEMES */
@@ -40,6 +52,11 @@ body {
 
     /* Background */
     background-image: linear-gradient( 90deg, darkslateblue, darkorchid);
+
+    /* Text */
+    color: white;
+
+    text-shadow: none;
 
     /* Misc */
     box-shadow: var(--theme-box-shadow);
@@ -346,10 +363,108 @@ body {
     box-shadow: 0 0 10px 2px #26afff;
 }
 
-/* Christmas Theme */
+/* Dreamy Theme */
+.dreamy {
+    background-color: var(--dreamy-site-background-color);
+    background-image: var(--dreamy-site-background-image);
 
-.xmas #snow{
-    /* Layout */
-    display: block;
+    color: mediumspringgreen;
+    text-shadow: 
+    3px 0px 0 black, 
+    0px 3px 0 black,
+    -3px 0px 0 black, 
+    0px -3px 0 black;
+}
+
+.dreamy .sidebar, .dreamy .header__button-banner {
+    /* Border */
+    border-color: var(--dreamy-border-color);
+    border-radius: 0;
+
+    /* Background */
+    background-color: var(--dreamy-element-background-color);
+    background-image: var(--dreamy-element-background);
+}
+
+.dreamy #main {
+    /* Border */
+    border-color: var(--dreamy-border-color);
+    border-radius: 0;
+
+    /* Background */
+    background-color: var(--dreamy-main-background-color);
+    background-image: var(--dreamy-main-background);
+}
+
+.dreamy .nav-menu nav {
+    /* Background */
+    background-color: rgba(0, 0, 0, 0.6);
+
+    /* Border */
+    border: 2px solid mediumaquamarine;
+    border-radius: 0px;
+}
+
+.dreamy .nav-menu__cat-title {
+    /* Text */
+    color: turquoise;
+
+    font-size: 1.5em;
+
+    font-weight: bolder;
+
+    text-shadow: none;
+}
+
+.dreamy .nav-menu__nav::before {
+    opacity: 0;
+}
+
+.dreamy .nav-menu__nav {
+    /* Background */
+    background-color: black;
+    background-image: none;
+
+    /* Border */
+    border: 2px solid turquoise;
+    border-radius: 0px;
+
+    /* Text */
+    text-decoration: none;
+    color: mediumspringgreen;
+    text-shadow: 2px 2px 2px black;
+}
+
+.dreamy .nav-menu__nav:hover {
+     /* Background */
+    background-color: darkblue;
+    background-image: none;
+
+    /* Border */
+    border: 2px solid white;
+
+    /* Text */
+    color: white;
+}
+
+.dreamy .nav-menu__nav--active {
+    /* Background */
+    background-color: darkblue;
+
+    /* Text */
+    font-weight: bold;
+    color: white;
+}
+
+.dreamy #main hr {
+    /* Background */
+    background-color: mediumspringgreen;
+
+    /* Border */
+    border: 2px solid mediumspringgreen;
+    border-radius: 0px;
+
+    /* Misc */
+    box-shadow: none;
 }
 

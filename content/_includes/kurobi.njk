@@ -18,8 +18,9 @@
 <body>
     <div class="theme-changer">
         <div class="theme-changer__buttons">
-            <button id="default" onclick="init_theme(themes.default)">Default Red</button>
+            <button id="default" onclick="init_theme(themes.default)">Default</button>
             <button id="dark-mode" onclick="init_theme(themes.dark)">Midnight</button>
+            <button id="dreamy" onclick="init_theme(themes.dreamy)">Dreamy</button>
         </div>
         <div class="theme-changer__close-button">
             <button id="toggle-changer" onclick="toggle_hide()">>></button>
@@ -90,10 +91,6 @@
                     </nav>
                 </div>
             </div>
-            <div id="time">
-                <h4>Time in Poland:</h4>
-                <span id="clock">0:00</span>
-            </div>
             <div id="link-button">
                 <h4>Link me back</h4>
                 <div class="button">
@@ -118,9 +115,9 @@
             </div>
         </div>
         <div class="sidebar sidebar--right">
-            <div id="counter">
-                <h4>Visits Counter</h4>
-                <script type="text/javascript" src="https://counter.websiteout.com/js/6/0/0/0"></script>
+            <div id="time">
+                <h4>Time in Poland:</h4>
+                <span id="clock">0:00</span>
             </div>
         </div>
         <div id="footer">
@@ -130,9 +127,9 @@
     </div>
 
     <!-- SCRIPTS -->
-    <script async src="{{ nesting}}assets/js/themes.js"></script>
     <script async src="{{ nesting }}assets/js/main.js"></script>
     <script async src="{{ nesting }}assets/js/clock.js"></script>
     <script async src="{{ nesting }}assets/js/snow.js"></script>
+    <script async src="{{ nesting }}assets/js/themes.js"></script>
 </body>
 </html>

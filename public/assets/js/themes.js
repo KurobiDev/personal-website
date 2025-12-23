@@ -10,14 +10,16 @@
 const themes = {
     default: 'none',
     dark: 'dark-mode',
-    xmas: 'xmas'
+    dreamy: 'dreamy',
 }
 
 var panel_hidden = true;
+var previous_theme = 'none';
 
 function init_theme(theme)
 {
     console.log("W.I.P. - Theme initiation");
+    previous_theme = localStorage.getItem("theme");
     localStorage.setItem("theme", theme)
     document.body.removeAttribute("class");
     document.body.classList.add(theme);
@@ -36,14 +38,15 @@ function isXmas()
     const begin_date = new Date(today.getFullYear(),11,24);
     const end_date = new Date(today.getFullYear(),11,27);
 
+    const snow = document.getElementById("snow");
+
     if (today >= begin_date && today < end_date) {
         console.log("IT'S CHRISTMAS!!!");
-        return true
+        snow.style.display = "block";
     } else {
        console.log("It's not christmas."); 
+       snow.style.display = "none";
     }
-    return false;
-
 }
 
 function load_themes()
@@ -54,9 +57,7 @@ function load_themes()
         init_theme("none");
     }
 
-    if(isXmas()) {
-        init_theme(themes.xmas);
-    }
+    isXmas();
 }
 
 function toggle_hide() {

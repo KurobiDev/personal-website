@@ -32,6 +32,8 @@
     color: black;
     margin: 0;
     width: 100%;
+
+    text-shadow: none;
 }
 
 .key {
@@ -133,6 +135,8 @@
     text-align: center;
 
     color: black;
+
+    text-shadow: none;
 
     /* Transforming */
     transform: translateY(100px);
