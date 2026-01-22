@@ -1,11 +1,10 @@
 :root {
     --site-font-size: 14pt;
-    --site-font-family: Arial, Helvetica, sans-serif;
-
+    --site-font-family: serif;
     /* Light Mode */
-    --site-background-image: url("/assets/images/background.gif");
+    --site-background-image: url("/assets/images/Wallpaper.png");
 
-    --navbar-background-color: #d34949;
+    --navbar-background-color: #c22525;
     --sidebar-background-color: #fff;
     --main-background-color: #fff;
     --footer-background-color: #fff;
@@ -19,6 +18,8 @@ body {
     font-family: var(--site-font-family);
     font-size: var(--site-font-size);
     background-image: var(--site-background-image);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .container {
@@ -30,7 +31,7 @@ body {
     "header header"
     "sidebar main"
     "footer footer"
-    / 250px 1fr;
+    / 200px 1fr;
 }
 
 header {
@@ -64,10 +65,16 @@ aside #clock {
 main {
     grid-area: main;
 
-    padding: 10px;
+    padding: 15px;
 
     border: 2px solid #000;
     background-color: var(--main-background-color);
+
+    text-align: center;
+}
+
+main menu, main ul {
+    display: inline-block;
 }
 
 footer {
@@ -122,47 +129,6 @@ header nav menu li > a:hover {
     text-decoration: underline;
 }
 
-header nav menu li.dropdown {
-    display: inline-block;
-}
-
-header nav menu li.dropdown > strong {
-    color: #fff;
-
-    font-weight: normal;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 100px;
-
-    border: 2px solid #000;
-    background-color: #f9f9f9;
-
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 5px 10px;
-}
-
-li.dropdown:hover .dropdown-content, li.dropdown:focus-within .dropdown-content{
-    display: block;
-}
-
-.project-subsection {
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-.project-subsection > img {
-    margin: 15px;
-    float: left;
-}
-
 .picture-element {
     width: 300px;
     text-align: center;
@@ -191,6 +157,76 @@ li.dropdown:hover .dropdown-content, li.dropdown:focus-within .dropdown-content{
 .button-gallery div img:hover{
     transform: scale(1.25);
 }
+
+/* PROJECT SECTIONS */
+
+#project {
+
+    margin: 10px 10px;
+    border: 1px solid black;
+    
+    display: flex;    
+}
+
+#project span {
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* MISC ELEMENTS */
+
+#guestbook {
+    width: 100%;
+    height: 600px;
+}
+
+#site-updates {
+    overflow: hidden;
+    overflow-y: scroll;
+
+    max-height: 400px;
+}
+
+#site-updates section{
+    text-align: left;
+}
+
+#fetch {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+    border: 2px solid black;
+    background-color: black;
+
+    color: white;
+    text-align: left;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#title {
+    background-color: white;
+
+    color: black;
+    margin: 0;
+    padding-left: 5px;
+    width: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.key {
+    font-weight: bold;
+    color: brown;
+}
+
+/* RESPONSIVE LAYOUT */
 
 @media (max-width: 800px) {
     body {
@@ -221,12 +257,6 @@ li.dropdown:hover .dropdown-content, li.dropdown:focus-within .dropdown-content{
 
     header nav img {
         width: 300px;
-    }
-
-    .project-subsection > img {
-        margin: auto;
-        float: none;
-        display: block;
     }
 }
 

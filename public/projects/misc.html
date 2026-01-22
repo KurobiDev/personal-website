@@ -10,10 +10,10 @@
     <meta name="author" content="BlackFlame">
     <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
 
-    <link rel="stylesheet" href="../assets/main.css?nocache=1761827820984">
+    <link rel="stylesheet" href="../assets/css/main.css?nocache=1769095258676">
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
-    <!--<script src="../main.js?nocache=1761827820984"></script>-->
+    <!--<script src="../main.js?nocache=1769095258676"></script>-->
 </head>
 <body>
     <div class="container">
@@ -22,17 +22,12 @@
                 <nav>
                     <img src="../assets/images/title.png" alt="Kurobi" width="500">
                     <menu>
-                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/home.html">Home</a></li>
                         <li><a href="/about.html">About</a></li>
-                        <li class="dropdown">
-                            <strong>Projects</strong>
-                            <div class="dropdown-content">
-                                <a href="/projects/games.html">Games</a>
-                                <a href="/projects/webdev.html">Webdev</a>
-                                <a href="/projects/art.html">Art</a>
-                                <a href="/projects/misc.html">Other</a>
-                            </div>
-                        </li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/links.html">Links</a></li>
+                        <li><a href="/guestbook.html">Guestbook</a></li>
+                        <li><a href="/collections">Collections</a></li>
                         <li><a href="/blog">Blog</a></li>
                         <!--<li><a href="/archive.html">Archive</a></li>-->
                     </menu>
@@ -43,70 +38,48 @@
                     <h4>Time in Poland:</h4>
                     <span id="clock">12:00</span>
                 </div>
-                <!--
-                <div id="new-game">
-                    <h4>Games</h4>
-                    <a href="#"><img src="../assets/images/buttons/Button-Steam-wishlist.gif" alt="# is now on Steam! Get it now!"></a>
-                    <br>
-                    <a href="#"><img src="../assets/images/buttons/Button-Itchio-download.gif" alt="# is now on Itch.io! Get it now!"></a>
-                </div>
-                -->
                 <div id="link-button">
                     <h4>Link button</h4>
-                    <a href="https://kurobi.neocities.org/" target="_blank"><img src="https://kurobi.neocities.org/assets/images/88x31.gif" alt="BlackFlame"></a>
+                    <a href="https://kurobi.neocities.org/" target="_blank" title="Kurobi"><img src="https://kurobi.neocities.org/assets/images/88x31.gif" alt="BlackFlame"></a>
                     <br>
-                    <textarea class="code-textarea"><a href="https://kurobi.neocities.org/" target="_blank"><img src="https://kurobi.neocities.org/assets/images/88x31.gif" alt="BlackFlame"></a>
+                    <textarea class="code-textarea"><a href="https://kurobi.neocities.org/" target="_blank" title="Kurobi"><img src="https://kurobi.neocities.org/assets/images/88x31.gif" alt="BlackFlame"></a>
                     </textarea>
-                </div>
-                <div id="social">
-                    <h4>Reach me here</h4>
-                    <div class="aside_button-gallery">
-                        <a href="https://discord.gg/X5zuCb9tZz"><img src="../assets/images/buttons/social/discord_now.gif" alt="Discord Server"></a>
-                    </div>
-                </div>
-                <div id="badges">
-                    <h4>Buttons</h4>
-                    <div class="aside_button-gallery">
-                        <marquee class="button-row" id="likes-buttons" scrollamount="5">
-                            <div>
-                                <img src="../assets/images/buttons/likes/hl.gif" alt="Half-Life">
-                                <img src="../assets/images/buttons/likes/2hu.gif" alt="Touhou Project">
-                                <img src="../assets/images/buttons/likes/fspeech.gif" alt="Free Speech NOW!">
-                            </div>
-                        </marquee>
-                    </div>
                 </div>
             </aside>
         <main>
-            <section>
+            <article>
     <h1>Other works</h1>
     <p>A collection of my other works including craftmanship, electronics, music, etc.</p>
-    <div class="project-subsection">
-        <h3>Private NAS Server</h3>
+    <section id="project">
+        <span>
+        <h3>Private Network Storage</h3>
         <p>
             A tiny project I did in a day. <br>
-            It's a simple NAS server I set up on a Raspberry Pi, running on a Samba service. <br>
-            I intend to store mainly some saved memes as well as text projects. <br>
-            I have plans to expand the storage of the NAS server, making it serve it's purpose for more, than just storing memes and documents. <br>
-            <br>
-            <b>Specs:</b>
+            It was a simple NAS server I set up on a Raspberry Pi, running on Samba. <br>
+            I intended to store mainly some saved memes as well as text projects. <br>
+            Recently dismantled it - running a NAS on a pendrive is a horrible idea. <br>
+            <sup>(The pendrive is still fine.)</sup>
+        </p>
+        </span>
+        <span>
+            <b>Specs</b>
             <ul>
                 <li>
                     Machine: Raspberry Pi 3B+
                 </li>
                 <li>
-                    OS: Debian 13 "Trixie" (Raspberry Pi OS)
+                    OS: Debian 13 "Trixie"
                 </li>
                 <li>
-                    Current Storage: 16 GB (Single USB Stick)
+                    Storage: 15 GB (Single USB Stick)
                 </li>
             </ul>
-        </p>
-    </div>
-</section>
+        </span>
+    </section>
+</article>
         </main>
         <footer>
-                    &copy; Kurobi (BlackFlame) 2025
+                    &copy; Kurobi 2025 - 2026
                     <i>|</i>
                     <a href="https://neocities.org/site/kurobi" target="_blank">neocities profile</a>
                     <i>|</i>
@@ -114,7 +87,7 @@
                     <i>|</i>
                     <a href="https://kurobi.nekoweb.org/">Nekoweb mirror</a>
                     <i>|</i>
-                    <a href="/v99">Go back to the 90s.</a>
+                    <a href="/v99">Earlier version</a>
         </footer>
     </div>
 
