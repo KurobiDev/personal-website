@@ -144,18 +144,55 @@ header nav menu li > a:hover {
     text-align: center;
 }
 
-.button-gallery div {
-    padding: 5px;
+/* LATEST BLOG POST */
 
-    display: inline;
+#blog-entry {
+    border: 5px ridge #ff0000;
+    padding: 10px;
+
+    text-align: left;
 }
 
-.button-gallery div:hover{
-    z-index: 1;
+#blog-entry h3 {
+    margin-top: 0;
 }
 
-.button-gallery div img:hover{
-    transform: scale(1.25);
+/* SITEMAP */
+
+#sitemap, #sitemap ul {
+    float: left;
+    text-align: left;
+    border-left: 1px solid black ;
+}
+
+#sitemap li {
+    list-style-type: '––––';
+    margin: 3px 0;
+}
+
+#sitemap ul { 
+    break-inside: avoid;
+    margin-bottom: 15px;
+}
+
+/* 88x31 BUTTONS */
+.buttons {
+    display: flex;
+
+    justify-content: center;
+}
+
+.buttons .button {
+    padding: 0;
+    margin: 3px;
+}
+
+.buttons .button img {
+    box-shadow: black 3px 3px 2px;
+}
+
+.buttons .button:hover {
+    transform: translateX(2px) translateY(2px);
 }
 
 /* PROJECT SECTIONS */
