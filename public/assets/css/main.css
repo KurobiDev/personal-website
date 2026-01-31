@@ -34,6 +34,13 @@ body {
     / 200px 1fr;
 }
 
+#welcome {
+    max-width: 1000px;
+    grid-template:
+    "header"
+    "main";
+}
+
 header {
     grid-area: header;
 
@@ -129,19 +136,61 @@ header nav menu li > a:hover {
     text-decoration: underline;
 }
 
-.picture-element {
-    width: 300px;
-    text-align: center;
+/* GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.picture-element > .desc {
-    font-size: 12pt;
-    text-align: center;
+.gallery-picture {
+    margin: 5px;
+
+    position: relative;
+
+    width: 225px;
+    height: 225px;
+
+    box-sizing: border-box;
+
+    border: 4px ridge red;
+    display: flex;
+    overflow: hidden;
 }
 
-.gallery .picture-element {
-    display: inline-block;
+.gallery-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-picture .picture-desc {
+    margin-bottom: 0;
+    padding: 3px;
+    
+    position: absolute;
+    bottom: 0;
+
+    background-color: #fff;
+    width: 100%;
+
     text-align: center;
+    font-size: 16px;
+
+    justify-content: center;
+
+    display: none;
+}
+
+.gallery-picture:hover .picture-desc{
+    display: block;
+}
+
+.gallery-picture:hover img {
+    transform: scale(1.15);
+}
+
+#portrait {
+    justify-content: center;
 }
 
 /* LATEST BLOG POST */
@@ -195,7 +244,24 @@ header nav menu li > a:hover {
     transform: translateX(2px) translateY(2px);
 }
 
-/* PROJECT SECTIONS */
+/* PROJECTS */
+
+#projects-nav {
+    margin: auto;
+
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+#projects-nav td {
+    border: 2px solid black;
+}
+
+#projects-nav td a{
+    margin: 5px;
+    font-size: 1.75em;
+    text-decoration: none;
+}
 
 #project {
 
@@ -203,6 +269,12 @@ header nav menu li > a:hover {
     border: 1px solid black;
     
     display: flex;    
+}
+
+#project img {
+    margin: 10px;
+
+    align-self: center;
 }
 
 #project span {
@@ -219,7 +291,7 @@ header nav menu li > a:hover {
 
 #guestbook {
     width: 100%;
-    height: 600px;
+    height: 800px;
 }
 
 #site-updates {
