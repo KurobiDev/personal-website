@@ -1,8 +1,8 @@
 # <ins>Kurobi's personal website 🦊</ins>
 
----
-
 Source code of my website.
+
+---
 
 - consists mainly of `.html`, `.css` and `.js`
 
