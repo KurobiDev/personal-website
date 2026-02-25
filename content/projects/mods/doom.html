@@ -1,28 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DOOM</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="Kurobi's personal site.">
-    <meta name="author" content="Kurobi">
-    <meta name="keywords" content="GameDev, Indie, Anime, Manga, Kurobi">
-
-    <link rel="stylesheet" href="../../assets/css/project.css?nocache=1772055893974">
-    <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
-</head>
-<body class="doom">
-    <div class="container">
-        <div class="header">
-            <img src="../../assets/images/works/games/titles/Doom.png" alt="DOOM Modding" width="400px">
-            <br>
-            <a href="../../projects/games">Go back</a>
-        </div>
-        <hr>
-        <div class="main">
-            <div class="introduction">
+---
+layout: game.njk
+title: DOOM
+nesting: ../../
+theme: doom
+headersrc: Doom.png
+headertext: DOOM Modding
+---
+<div class="introduction">
     <p>
         DOOM was one of the games I started creating mods for first. Mainly I aimed for creating mods for more vanilla ports of DOOM. It was a great first choice for ease of map making as well as still-high popularity of the game.
     </p>
@@ -42,25 +26,25 @@
         <p>
             <div class="gallery">
                 <div class="gallery-picture">
-                    <a href="../../assets/images/works/games/screenshots/doom/Szkolna1.jpg"><img src="../../assets/images/works/games/screenshots/doom/Szkolna1.jpg" alt="Screenshot 1"></a>
+                    <a href="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna1.jpg"><img src="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna1.jpg" alt="Screenshot 1"></a>
                     <p class="picture-desc">
                         The front gate.
                     </p>
                 </div>
                 <div class="gallery-picture">
-                    <a href="../../assets/images/works/games/screenshots/doom/Szkolna2.jpg"><img src="../../assets/images/works/games/screenshots/doom/Szkolna2.jpg" alt="Screenshot 2"></a>
+                    <a href="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna2.jpg"><img src="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna2.jpg" alt="Screenshot 2"></a>
                     <p class="picture-desc">
                         Entrance to the <em>wooden</em> house.
                     </p>
                 </div>
                 <div class="gallery-picture">
-                    <a href="../../assets/images/works/games/screenshots/doom/Szkolna3.jpg"><img src="../../assets/images/works/games/screenshots/doom/Szkolna3.jpg" alt="Screenshot 3"></a>
+                    <a href="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna3.jpg"><img src="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna3.jpg" alt="Screenshot 3"></a>
                     <p class="picture-desc">
                         Attic.
                     </p>
                 </div>
                 <div class="gallery-picture">
-                    <a href="../../assets/images/works/games/screenshots/doom/Szkolna4.jpg"><img src="../../assets/images/works/games/screenshots/doom/Szkolna4.jpg" alt="Screenshot 4"></a>
+                    <a href="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna4.jpg"><img src="{{ nesting }}assets/images/works/games/screenshots/doom/Szkolna4.jpg" alt="Screenshot 4"></a>
                     <p class="picture-desc">
                         The permanent <s>undead</s> residents of the Belvedere.
                     </p>
@@ -77,10 +61,3 @@
     </div>
 </div>
 <hr>
-        </div>
-        <div class="footer">
-            &copy; Kurobi 2025 - 2026
-        </div>
-    </div>
-</body>
-</html>
